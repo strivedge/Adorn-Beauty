@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        table {
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        table, tr, td {
+                page-break-inside: avoid;
+                page-break-after: avoid;
+                page-break-before: avoid;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="width: 100%; ">
+            <div style="text-align: center;">            
+                <h3>SMS Log Report</h5>
+                <table>
+                    <tr>
+                        <td>Mobile</td>
+                        <td>Date</td>
+                        <td>SMS Type</td>
+                        <td>SMS Count</td>
+                        <td>Price</td>
+                        <td>Total Price</td>
+                    </tr>
+                <% if (data.length > 0) { %>
+                    <% data.forEach(val => {%>
+                       <tr style=" ">
+                        <td><%= val.mobile %></td>
+                        <td><%= val.date %></td>
+                        <td><%=val.sms_type %></td>
+                        <td><%= val.sms_count %></td>
+                        <td>£<%=val.price %></td>
+                        <td>£<%=val.total_price %></td>
+                        
+                    </tr>
+                    <%  });%>
+                     <tr>
+                        <td colspan="3"> Total</td>
+                        <td><%= total_count.total_sms_count %></td>
+                        <td></td>
+                        <td>£<%=total_count.total_price %></td>
+                        
+                    </tr>
+                <% }%>
+
+                </table>
+             </div>
+        </div>
+    </body>
+</html>
+

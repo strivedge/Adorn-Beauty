@@ -1,0 +1,77 @@
+<table style="width:100%;border-collapse: separate!important;border-spacing: 0;font-size: 14px;font-family: Tahoma, Geneva, sans-serif;table-layout: fixed;border-collapse: collapse;" width="100%" cellspacing="1" cellpadding="1" border="0">
+    <tbody>
+        <tr>
+            <td colspan="2" style="text-align:center;border-bottom:1px solid #cccccc;padding-bottom: 10px;">
+                <img alt="Logo" src="
+                {{text.site_url}}/images/front-logo.png" style="height: auto;max-width: 125px;width:125px; text-align: center;margin: 0 auto;display: block;">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-weight: bold; font-size: 16px;padding: 10px 0px 0px; text-align:left;">Dear {{text.client_name}},</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-size: 14px; padding-top: 5px;text-align: left;"> It's been a while since we last saw you. We hope everything is going well for you. As a valued customer, we want to extend a special offer to you: enjoy a {{text.discount_value}}% discount on your next visit when you book your appointment online at <strong>{{text.company_website}}</strong> and use the code <strong>{{text.discount_code}}</strong> during checkout. This exclusive offer is valid for the next {{text.validate_days}} days from <strong>{{text.validity_date}}</strong>. and can only be used for online bookings, not in-store visits. We look forward to welcoming you back soon!</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-size: 14px; padding-top: 5px;text-align: left;"> To schedule your appointment, kindly <strong><a href="https://{{text.location_domain}}.{{text.front_url}}" style="color: #613228;">Click Here.</a></strong></td>
+        </tr>
+
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2" style="text-align:right; vertical-align:top;font-weight: bold; width: 100%;">
+                <strong style="font-size: 18px;padding-bottom: 5px;display: block;text-align: right;">Thanks,</strong>
+                Team {{text.company_name}}
+            </td>
+        </tr>
+        <tr style="display: none;">
+            <td>{{#text.location_contact}}</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h3 style="margin: 15px 0 10px;background: #efefef; border-bottom: 1px solid #eff2f7;padding: 15px;border-radius: 0.25rem;font-weight: bold;color: #623229;font-size: 16px;">Branch Name and Contact Details:</h3>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table width="100%" cellspacing="1" cellpadding="1" border="0" style="display: table; table-layout: fixed;border-collapse: collapse;">
+                    <tbody>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>
+                                    {{text.company_name}} {{text.location_name}} :</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{text.location_contact}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr style="display: none;">
+            <td>{{/text.location_contact}}</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="width:100%;text-align:center;">
+                <p style="margin: 10px 0;padding: 10px 10px;background: #efefef">
+                    <strong style="display: none;">
+                        {{#text.front_url}}
+                    </strong>
+
+                    <strong style="display: block;padding-bottom: 6px;">if you have any query about treatments or want to learn more about treatments, please visit
+                        <a href="https://{{text.location_domain}}.{{text.front_url}}" style="color: #613228;">https://{{text.location_domain}}.{{text.front_url}}</a>
+                    </strong>
+
+                    <strong style="display: none;">
+                        {{/text.front_url}}
+                    </strong>
+
+                    <strong style="display: none;">
+                        {{#text.unsubscribe_url}}
+                    </strong>
+                    <strong style="display: block;">Manage your preference <a href="{{text.unsubscribe_url}}" style="color: #613228;">Unsubscribe</a>. </strong>
+                    <strong style="display: none;">
+                        {{/text.unsubscribe_url}}
+                    </strong>
+                </p>
+            </td>
+        </tr>
+    </tfoot>
+</table>

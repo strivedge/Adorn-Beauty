@@ -1,0 +1,96 @@
+<table style="width:100%;border-collapse: separate!important;border-spacing: 0;font-size: 14px;font-family: Tahoma, Geneva, sans-serif;table-layout: fixed;border-collapse: collapse;" width="100%" cellspacing="1" cellpadding="1" border="0">
+    <tbody>
+        <tr>
+            <td style="text-align:center;border-bottom:1px solid #cccccc;padding-bottom: 10px;">
+                <img alt="Logo" src="
+                {{text.site_url}}/images/front-logo.png" style="height: auto;max-width: 125px;width:125px; text-align: center;margin: 0 auto;display: block;">
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 10px 0px 0px; text-align: center;"><span style="font-size: 16px;"><strong>Warmest birthday wishes to you! May you be blessed with joy and happiness not only on your special day but every day of your life! The entire team at {{text.company_name}} {{text.location_name}} is thrilled to celebrate your birthday with you. Happy Birthday!</strong></span><br></td>
+        </tr>
+        <tr>
+            <td style="padding: 10px 0px 0px; text-align: left; font-weight: 400; font-size: 16px;"><span style="font-size: 16px;">
+                    As a token of our appreciation, we have an exclusive offer just for you. Enjoy a generous</span><strong style="font-size: 16px;"> {{text.discount_value}}% </strong><span style="font-size: 16px;"><span style="font-size: 16px;"><span style="font-size: 16px;">discount on any treatment valued above {{text.min_order_value}} with code </span><strong style="font-size: 16px;">{{text.discount_code}}</strong><span style="font-size: 16px;"><span style="font-size: 16px;">. Please note that certain treatments are excluded from this offer, and it cannot be combined with other promotions. Act fast, as this offer is only valid for the next </span><strong style="font-size: 16px;">{days} days</strong><span style="font-size: 16px;"><span style="font-size: 16px;">! Kindly note that this offer is not applicable on bank holidays or regular weekends (Saturdays and Sundays). The discount will apply only to the amount due on the day of redemption. This exclusive offer is tailored specifically for </span><strong>{{text.client_name}}</strong><span style="font-size: 16px;"> and valid at </span></span></span></span><strong style="font-size: 16px;">{{text.location_name}}</strong><span style="font-size: 16px;">. This offer is valid on ONLINE BOOKINGS ONLY. To earn the benefit of your offer, please book your appointment at {{text.location_domain}}.{{text.front_url}} </span></span><br>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size: 16px;padding-top: 5px;text-align: left;">
+                <strong>NOTE:</strong>
+                This offer is not valid on bank holidays or regular weekends (Saturdays and Sundays). The discount will only apply to the amount due on the day of redemption. For example, if you had a patch test for LVL worth 5 two days ago and now decide to use this offer for your LVL treatment, your total bill will be 45. You will receive a 25 discount on the 45, not on 50.
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-top: 5px; text-align: left; font-size: 16px;"><span style="font-size: 16px;">
+                    The offer is exclusively available to </span><strong style="font-size: 16px;">{{text.client_name}}</strong><span style="font-size: 16px;">
+                    and will remain valid for the next </span><strong>{{text.validate_days}}</strong><span style="font-size: 16px;"> days, as indicated by </span><strong style="font-size: 16px;">{{text.validity_date}}</strong>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="font-size: 16px;padding-top: 5px;text-align: left;">
+                This promotion is exclusively applicable to bookings made online. To schedule your appointment, <strong>
+                    <a href="https://{{text.location_domain}}.{{text.front_url}}" style="color: #613228;">Click Here.</a>
+                </strong></td>
+        </tr>
+
+
+    </tbody>
+    <tfoot>
+        <tr>
+            <td style="text-align:right; vertical-align:top;font-weight: bold; width: 100%;">
+                <strong style="font-size: 18px;padding-bottom: 5px;display: block;text-align: right;">Thanks,</strong>
+                Team {{text.company_name}}
+            </td>
+        </tr>
+        <tr style="display: none;">
+            <td>{{#text.location_contact}}</td>
+        </tr>
+        <tr>
+            <td>
+                <h3 style="margin: 15px 0 10px;background: #efefef; border-bottom: 1px solid #eff2f7;padding: 15px;border-radius: 0.25rem;font-weight: bold;color: #623229;font-size: 16px;">Branch Name and Contact Details:</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="100%" cellspacing="1" cellpadding="1" border="0" style="display: table; table-layout: fixed;border-collapse: collapse;">
+                    <tbody>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>
+                                    {{text.company_name}} {{text.location_name}} :</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{text.location_contact}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr style="display: none;">
+            <td>{{/text.location_contact}}</td>
+        </tr>
+        <tr>
+            <td style="width:100%;text-align:center;">
+                <p style="margin: 10px 0;padding: 10px 10px;background: #efefef">
+                    <strong style="display: none;">
+                        {{#text.front_url}}
+                    </strong>
+
+                    <strong style="display: block;padding-bottom: 6px;">if you have any query about treatments or want to learn more about treatments, please visit
+                        <strong style="display: none;"> {{#text.location_domain}} </strong> <a href="https://{{text.location_domain}}.{{text.front_url}}" style="color: #613228;">https://{{text.location_domain}}.{{text.front_url}}</a> <strong style="display: none;"> {{/text.location_domain}} </strong> <strong style="display: none;"> {{^text.location_domain}} </strong> <a href="https://{{text.front_url}}" style="color: #613228;">https://{{text.front_url}}</a> <strong style="display: none;"> {{/text.location_domain}} </strong>
+                    </strong>
+
+                    <strong style="display: none;">
+                        {{/text.front_url}}
+                    </strong>
+
+                    <strong style="display: none;">
+                        {{#text.unsubscribe_url}}
+                    </strong>
+                    <strong style="display: block;">Manage your preference <a href="{{text.unsubscribe_url}}" style="color: #613228;">Unsubscribe</a>. </strong>
+                    <strong style="display: none;">
+                        {{/text.unsubscribe_url}}
+                    </strong>
+                </p>
+            </td>
+        </tr>
+    </tfoot>
+</table>

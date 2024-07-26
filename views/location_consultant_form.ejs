@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <style type="text/css">
+      html {
+         -webkit-print-color-adjust: exact;
+      }
+
+      table {
+         width: 100%;
+         margin-bottom: 0px;
+      }
+
+      table,
+      tr,
+      td {
+         page-break-inside: avoid;
+         font-family: "Montserrat", sans-serif;
+      }
+
+      tr,
+      td {
+         page-break-inside: avoid;
+      }
+
+      td {
+         display: block;
+      }
+
+      .details td {
+         padding: 10px 10px;
+      }
+
+      .details tr:first-child td {
+         padding: 0px;
+      }
+
+      h2 {
+         font-weight: 700;
+         color: #623229;
+         font-size: 22px;
+         padding: 0px 10px 10px;
+         text-align: center;
+         font-family: "Montserrat", sans-serif;
+      }
+
+      h3 {
+         font-weight: bold;
+         color: #623229;
+         font-size: 20px;
+         background: #efefef;
+         padding: 10px;
+         text-align: left;
+         margin: 0;
+         font-family: "Montserrat", sans-serif;
+      }
+
+      label {
+         font-weight: bold;
+         font-size: 16px;
+         padding-right: 7px;
+         color: #1b0d0b;
+         font-family: "Montserrat", sans-serif;
+      }
+
+      span {
+         font-size: 16px;
+         font-weight: 400;
+      }
+
+      h4 {
+         font-size: 18px;
+         font-weight: bold;
+         margin: 10px 0px 5px;
+         font-family: "Montserrat", sans-serif;
+      }
+
+      .description {
+         margin: 5px 0px 10px;
+         padding-bottom: 0 !important;
+      }
+
+      .details {
+         border: 2px solid #eff2f7;
+         border-radius: 4px;
+         border-spacing: 0;
+      }
+
+      .question-details {
+         border: 2px solid #eff2f7;
+         border-radius: 4px;
+         border-spacing: 0;
+         margin-bottom: 20px;
+         page-break-before: always;
+
+      }
+
+      .question-details tbody {
+         padding: 10px;
+         display: block;
+      }
+
+      .question-details tr {
+         margin-bottom: 0px;
+         display: block;
+      }
+
+      .question-details tr:first-child {
+         margin-bottom: 0;
+      }
+
+      .question-details label {
+         padding-bottom: 10px;
+         display: inline-block;
+      }
+
+      .description-label-content span {
+         width: 100%;
+         display: block;
+         padding-bottom: 5px;
+      }
+
+      /* radio button */
+      .question-details .form-check {
+         display: block;
+         position: relative;
+         padding-left: 28px;
+         cursor: pointer;
+         /*font-size: 15px;*/
+         -webkit-user-select: none;
+         -moz-user-select: none;
+         -ms-user-select: none;
+         user-select: none;
+         padding-bottom: 12px;
+         padding-right: 0;
+         font-size: 14px;
+         font-weight: 400;
+      }
+
+      .question-details .form-check:last-child {
+         padding-bottom: 0;
+      }
+
+      /* Hide the browser's default radio button */
+      .form-check input {
+         margin: 0;
+         display: none;
+      }
+
+      /* Create a custom radio button */
+      .form-check-label {
+         position: absolute;
+         top: -3px;
+         left: 0;
+         height: 18px;
+         width: 18px;
+         background-color: transparent;
+         border: 2px solid #000;
+         border-radius: 50%;
+         cursor: pointer;
+         padding: 0 !important;
+      }
+
+      .form-check-label span {
+         padding-left: 25px;
+         top: -3px;
+         position: relative;
+         white-space: normal;
+      }
+
+      /* When the radio button is checked, add a blue background */
+      .form-check input:checked~.form-check-label {
+         background-color: transparent;
+         border: 2px solid #000;
+      }
+
+      /* Create the indicator (the dot/circle - hidden when not checked) */
+      .form-check .form-check-label:after {
+         content: "";
+         position: absolute;
+         display: none;
+      }
+
+      /* Show the indicator (dot/circle) when checked */
+      .form-check input:checked~.form-check-label:after {
+         display: block;
+      }
+
+      /* Style the indicator (dot/circle) */
+      .form-check .form-check-label:after {
+         top: 5px;
+         left: 5px;
+         width: 8px;
+         height: 8px;
+         border-radius: 50%;
+         background: #623229;
+      }
+
+
+
+      .checkboxees .form-check {
+         display: block;
+         position: relative;
+         padding-left: 28px;
+         cursor: pointer;
+         /*font-size: 15px;*/
+         -webkit-user-select: none;
+         -moz-user-select: none;
+         -ms-user-select: none;
+         user-select: none;
+         font-size: 14px;
+         font-weight: 400;
+      }
+
+      /* Hide the browser's default checkbox */
+      .checkboxees .form-check input {
+         position: absolute;
+         opacity: 0;
+         cursor: pointer;
+         height: 0;
+         width: 0;
+      }
+
+      /* Create a custom checkbox */
+      .checkboxees .form-check-label {
+         position: absolute;
+         top: -3px;
+         left: 0;
+         height: 20px;
+         width: 20px;
+         background-color: transparent;
+         border-radius: 5px;
+      }
+
+      .checkboxees .form-check-label span {
+         padding-left: 25px;
+         top: -3px;
+         position: absolute;
+         white-space: normal;
+         width: max-content;
+         left: 0;
+         right: 0;
+      }
+
+
+      /* When the checkbox is checked, add a blue background */
+      .checkboxees .form-check input:checked~.form-check-label {
+         background-color: transparent;
+         border: 2px solid #000;
+      }
+
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkboxees .form-check-label:after {
+         content: "";
+         position: absolute;
+         display: none;
+      }
+
+      /* Show the checkmark when checked */
+      .checkboxees .form-check input:checked~.form-check-label:after {
+         display: block;
+      }
+
+      /* Style the checkmark/indicator */
+      .checkboxees .form-check .form-check-label:after {
+         left: 5px;
+         top: 1px;
+         width: 6px;
+         height: 12px;
+         border: solid #623229;
+         border-width: 0 0px 0px 0;
+         transform: rotate(0deg);
+         border-radius: 0;
+         background: transparent;
+         content: '✔';
+         color: #623229;
+
+      }
+
+      .custom-select {
+         display: inline-block;
+         height: calc(1.5em + 0.94rem + 2px);
+         padding: 0.47rem 1.75rem 0.47rem 0.75rem;
+         font-size: 0.9rem;
+         font-weight: 400;
+         line-height: 1.5;
+         color: #505d69;
+         vertical-align: middle;
+         border: 1px solid #ced4da;
+         border-radius: 0.25rem;
+         appearance: none;
+      }
+
+      .form-control {
+         height: 20px;
+         padding: 0.47rem 0.75rem;
+         font-size: 0.9rem;
+         font-weight: 400;
+         line-height: 1.5;
+         color: #505d69;
+         background-color: #fff;
+         background-clip: padding-box;
+         border: 1px solid #ced4da;
+         border-radius: 0.25rem;
+         width: 98%;
+         text-align: left;
+      }
+
+      textarea.form-control {
+         height: calc(1.5em + 0.94rem + 2px);
+         width: 98%;
+      }
+   </style>
+</head>
+
+<body>
+   <h2>Consultant Form Details</h2>
+   <table class="details">
+      <tr>
+         <td>
+            <h3>User Details</h3>
+         </td>
+      </tr>
+
+      <tr>
+         <% if (userHtml.name) { %>
+            <td><label>Name:</label> <span>
+                  <%= userHtml.name %>
+               </span></td>
+            <% } %>
+               <% if (userHtml.mobile) { %>
+                  <td><label>Mobile:</label> <span>
+                        <%= userHtml.mobile %>
+                     </span></td>
+                  <% } %>
+                     <% if (userHtml.email) { %>
+                        <td><label>Email:</label> <span>
+                              <%= userHtml.email %>
+                           </span></td>
+                        <% } %>
+                           <% if (userHtml.date_of_birth) { %>
+                              <td><label>Date of Birth:</label> <span>
+                                    <%= userHtml.date_of_birth %>
+                                 </span></td>
+                              <% } %>
+                                 <% if (userHtml.residential_address) { %>
+                                    <td><label>Residential Address:</label> <span>
+                                          <%= userHtml.residential_address %>
+                                       </span></td>
+                                    <% } %>
+                                       <% if (userHtml.surgery_name) { %>
+                                          <td><label>GP Surgery Name:</label> <span>
+                                                <%= userHtml.surgery_name %>
+                                             </span></td>
+                                          <% } %>
+                                             <% if (userHtml.doctor_name) { %>
+                                                <td><label>Doctor's Name:</label> <span>
+                                                      <%= userHtml.doctor_name %>
+                                                   </span></td>
+                                                <% } %>
+      </tr>
+
+   </table>
+
+   <!-- Before Questions -->
+   <% if (userHtml.before && userHtml.beforeQuestions.length> 0) { %>
+      <div class="question-details">
+         <table>
+            <thead>
+               <tr>
+                  <td>
+                     <% if (userHtml.before_question_text) { %>
+                        <h3 class="consultation-button">
+                           <%= userHtml.before_question_text %>
+                        </h3>
+                        <% } %>
+                  </td>
+               </tr>
+            </thead>
+         </table>
+
+         <% for (var i=0; i < userHtml.beforeQuestions.length; i++) { %>
+            <table>
+               <tr>
+                  <td>
+                     <% if (userHtml.beforeQuestions[i].group_data.name) { %>
+                        <% if (userHtml.beforeQuestions[i].group_data.name) { %>
+                           <h4>
+                              <%= userHtml.beforeQuestions[i].group_data.name %>
+                           </h4>
+                           <% } %>
+                              <% if (userHtml.beforeQuestions[i].group_data.description) { %>
+                                 <span class="description">
+                                    <%= userHtml.beforeQuestions[i].group_data.description %>
+                                 </span>
+                                 <% } %>
+                                    <% } %>
+
+                  </td>
+               </tr>
+            </table>
+
+            <% for (var j=0; j < userHtml.beforeQuestions[i].q_data.length; j++) { %>
+               <!-- que check_flag_minor start -->
+               <% if ((userHtml.beforeQuestions[i].q_data[j].flag_minor && userHtml.check_flag_minor) ||
+                  !userHtml.beforeQuestions[i].q_data[j].flag_minor) { %>
+                  <table>
+                     <tr>
+                        <td>
+                           <label class="control-label">
+                              <b>
+                                 <%= userHtml.beforeQuestions[i].q_data[j].question %>
+                              </b>
+                              <% if (userHtml.beforeQuestions[i].q_data[j].is_mandatory) { %>
+                                 <span style="color: #ff0000;">*</span>
+                                 <% } %>
+                           </label>
+                        </td>
+                     </tr>
+                     <% if (userHtml.beforeQuestions[i].q_data[j].image) { %>
+                        <tr>
+                           <td class="form-group" style="width:95%;display: inline-block;">
+                              <img id="blah" src="<%= userHtml.beforeQuestions[i].q_data[j].image %>" width="100%"
+                                 alt="question image" />
+
+                           </td>
+                        </tr>
+                        <% } %>
+
+                           <% if (userHtml.beforeQuestions[i].q_data[j].option_type=='radio' ) { %>
+
+                              <tr>
+                                 <td>
+                                 <td class="radio">
+                                    <% for (var k=0; k < userHtml.beforeQuestions[i].q_data[j].options.length; k++) { %>
+                                       <label class="form-check">
+                                          <%= userHtml.beforeQuestions[i].q_data[j].options[k].lable %>
+                                             <input type="<%= userHtml.beforeQuestions[i].q_data[j].option_type %>"
+                                                name="d_view_<%= userHtml.beforeQuestions[i].q_data[j].option_type %><%= i %><%= j %>"
+                                                class="form-check-input"
+                                                id="before_view_radio_<%= userHtml.beforeQuestions[i].q_data[j].option_type %>_<%= i %>_<%= j %>_<%= k %>"
+                                                value="<%= userHtml.beforeQuestions[i].q_data[j].options[k].lable %>" <%
+                                                if(userHtml.beforeQuestions[i].q_data[j].options[k].isCheck){ %>
+                                             <%="checked"%>
+                                                <% } %>>
+                                                   <label
+                                                      for="before_view_radio_<%= userHtml.beforeQuestions[i].q_data[j].option_type %>_<%= i %>_<%= j %>_<%= k %>"
+                                                      class="form-check-label">
+                                                   </label>
+                                       </label>
+                                       <% } %>
+
+                                          <% if (userHtml.beforeQuestions[i].q_data[j].other_text_check) { %>
+                                             <div class="space-bottom">
+                                                <label class="mt-2">
+                                                   <%= userHtml.beforeQuestions[i].q_data[j].other_text_value %>
+                                                </label>
+                                                <input type="text" class="form-control text-value" placeholder=""
+                                                   value="<%= userHtml.beforeQuestions[i].q_data[j].other_text_ans %>">
+                                             </div>
+                                             <% } %>
+                                 </td>
+                                 </td>
+                              </tr>
+                              <% } %>
+
+                                 <% if (userHtml.beforeQuestions[i].q_data[j].option_type=='checkbox' ) { %>
+                                    <tr>
+                                       <td>
+                                       <td class="checkboxees">
+                                          <% for (var k=0; k < userHtml.beforeQuestions[i].q_data[j].options.length;
+                                             k++) { %>
+                                             <label class="form-check">
+                                                <%= userHtml.beforeQuestions[i].q_data[j].options[k].lable %>
+                                                   <input
+                                                      type="<%= userHtml.beforeQuestions[i].q_data[j].option_type %>"
+                                                      name="<%= userHtml.beforeQuestions[i].q_data[j].option_type %><%= i %><%= j %>"
+                                                      class="form-check-input"
+                                                      id="before_checkbox_<%= userHtml.beforeQuestions[i].q_data[j].option_type %>_<%= i %>_<%= j %>_<%= k %>"
+                                                      value="<%= userHtml.beforeQuestions[i].q_data[j].options[k].lable %>"
+                                                      <% if(userHtml.beforeQuestions[i].q_data[j].options[k].isCheck){
+                                                      %>
+                                                   <%="checked"%>
+                                                      <% } %>>
+                                                         <label
+                                                            for="before_checkbox_<%= userHtml.beforeQuestions[i].q_data[j].option_type %>_<%= i %>_<%= j %>_<%= k %>"
+                                                            class="form-check-label">
+                                                         </label>
+                                             </label>
+                                             <% } %>
+                                                <% if (userHtml.beforeQuestions[i].q_data[j].other_text_check) { %>
+                                                   <label class="mt-2">
+                                                      <%= userHtml.beforeQuestions[i].q_data[j].other_text_value %>
+                                                   </label>
+                                                   <input type="text" class="form-control text-value"
+                                                      value="<%= userHtml.beforeQuestions[i].q_data[j].other_text_ans %>">
+                                                   <% } %>
+                                       </td>
+
+                                       </td>
+                                    </tr>
+
+                                    <% } %>
+
+                                       <% if (userHtml.beforeQuestions[i].q_data[j].option_type=='single' ) { %>
+                                          <tr>
+                                             <td class="custom-single-select">
+                                                <select class="custom-select">
+                                                   <option value="">Choose option</option>
+                                                   <% for (var k=0; k <
+                                                      userHtml.beforeQuestions[i].q_data[j].options.length; k++) { %>
+                                                      <option
+                                                         value="<%= userHtml.beforeQuestions[i].q_data[j].options[k].lable %>"
+                                                         <%
+                                                         if(userHtml.beforeQuestions[i].q_data[j].options[k].isCheck){
+                                                         %>
+                                                         <%="selected"%>
+                                                            <% } %>><%=
+                                                                  userHtml.beforeQuestions[i].q_data[j].options[k].lable
+                                                                  %>
+                                                      </option>
+                                                      <% } %>
+                                                </select>
+                                                <% if (userHtml.beforeQuestions[i].q_data[j].other_text_check) { %>
+                                                   <div class="space-bottom">
+                                                      <label class="mt-2">
+                                                         <%= userHtml.beforeQuestions[i].q_data[j].other_text_value %>
+                                                      </label>
+                                                      <input type="text" class="form-control text-value"
+                                                         value="<%= userHtml.beforeQuestions[i].q_data[j].other_text_ans %>">
+                                                   </div>
+                                                   <% } %>
+                                             </td>
+                                          </tr>
+                                          <% } %>
+                                             <% if (userHtml.beforeQuestions[i].q_data[j].option_type=='multi' ) { %>
+                                                <tr>
+                                                   <td class="custom-multi-select">
+                                                      <select class="custom-select" multiple>
+                                                         <% for (var k=0; k <
+                                                            userHtml.beforeQuestions[i].q_data[j].options.length; k++) {
+                                                            %>
+                                                            <option
+                                                               value="<%= userHtml.beforeQuestions[i].q_data[j].options[k].lable %>"
+                                                               <%
+                                                               if(userHtml.beforeQuestions[i].q_data[j].options[k].isCheck){
+                                                               %>
+                                                               <%="selected"%>
+                                                                  <% } %>><%=
+                                                                        userHtml.beforeQuestions[i].q_data[j].options[k].lable
+                                                                        %>
+                                                            </option>
+                                                            <% } %>
+                                                      </select>
+                                                      <% if (userHtml.beforeQuestions[i].q_data[j].other_text_check) {
+                                                         %>
+                                                         <div class="space-bottom">
+                                                            <label class="mt-2">
+                                                               <%= userHtml.beforeQuestions[i].q_data[j].other_text_value
+                                                                  %>
+                                                            </label>
+                                                            <input type="text" class="form-control text-value"
+                                                               value="<%= userHtml.beforeQuestions[i].q_data[j].other_text_ans %>">
+                                                         </div>
+                                                         <% } %>
+                                                   </td>
+                                                </tr>
+                                                <% } %>
+
+                                                   <% if (userHtml.beforeQuestions[i].q_data[j].option_type=='text' ) {
+                                                      %>
+                                                      <tr>
+                                                         <td class="custom-input-text">
+                                                            <input type="text" class="form-control" placeholder=""
+                                                               value="<%= userHtml.beforeQuestions[i].q_data[j].question_ans %>">
+                                                            <% if
+                                                               (userHtml.beforeQuestions[i].q_data[j].other_text_check)
+                                                               { %>
+                                                               <div class="space-bottom">
+                                                                  <label class="mt-2">
+                                                                     <%= userHtml.beforeQuestions[i].q_data[j].other_text_value
+                                                                        %>
+                                                                  </label>
+                                                                  <input type="text" class="form-control text-value"
+                                                                     value="<%= userHtml.beforeQuestions[i].q_data[j].other_text_ans %>">
+                                                               </div>
+                                                               <% } %>
+                                                         </td>
+                                                      </tr>
+                                                      <% } %>
+
+                                                         <% if
+                                                            (userHtml.beforeQuestions[i].q_data[j].option_type=='textarea'
+                                                            ) { %>
+                                                            <tr>
+                                                               <td>
+                                                                  <textarea class="form-control">
+                                    <%= userHtml.beforeQuestions[i].q_data[j].question_ans %>
+                                 </textarea>
+                                                                  <% if
+                                                                     (userHtml.beforeQuestions[i].q_data[j].other_text_check)
+                                                                     { %>
+                                                                     <div class="space-bottom">
+                                                                        <label class="mt-2">
+                                                                           <%= userHtml.beforeQuestions[i].q_data[j].other_text_value
+                                                                              %>
+                                                                        </label>
+                                                                        <input type="text" class="form-control"
+                                                                           value="<%= userHtml.beforeQuestions[i].q_data[j].other_text_ans %>">
+                                                                     </div>
+                                                                     <% } %>
+                                                               </td>
+                                                            </tr>
+                                                            <% } %>
+
+                  </table>
+
+
+
+                  <!-- option's que start -->
+                  <% if (userHtml.beforeQuestions[i].q_data[j].options.length> 0) { %>
+                     <!-- option's que forloop start -->
+                     <% for (var rio=0; rio < userHtml.beforeQuestions[i].q_data[j].options.length; rio++) { %>
+
+                        <% if (userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids.length> 0 &&
+                           userHtml.beforeQuestions[i].q_data[j].options[rio].isCheck) { %>
+
+                           <% for (var qorio=0; qorio <
+                              userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids.length; qorio++) { %>
+
+                              <table>
+                                 <tbody>
+                                    <tr>
+                                       <td>
+                                          <label>
+                                             <b>
+                                                <%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].question
+                                                   %>
+                                             </b>
+                                             <% if
+                                                (userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].is_mandatory)
+                                                { %>
+                                                <span style="color: #ff0000;">*</span>
+                                                <% } %>
+                                          </label>
+                                       </td>
+                                    </tr>
+                                    <% if (userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].image)
+                                       { %>
+                                       <tr>
+                                          <td class="form-group" style="width:95%;display: inline-block;">
+                                             <img id="blah"
+                                                src="<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].image %>"
+                                                width="100%" alt="question image" />
+                                          </td>
+                                       </tr>
+                                       <% } %>
+
+                                          <% if
+                                             (userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type=='radio'
+                                             ) { %>
+                                             <tr>
+                                                <td class="radio">
+                                                   <% for (var qrio=0; qrio <
+                                                      userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].options.length;
+                                                      qrio++) { %>
+                                                      <label class="form-check">
+                                                         <%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qrio].lable
+                                                            %>
+
+                                                            <input class="form-check-input"
+                                                               type="<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type %>"
+                                                               name="que_<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type %><%= i %><%= j %><%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio]._id %>"
+                                                               id="queid_<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type %><%= i %><%= j %><%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio]._id %>"
+                                                               value="<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qrio].lable %>"
+                                                               <%
+                                                               if(userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qrio].isCheck){
+                                                               %>
+                                                            <%="checked"%>
+                                                               <% } %>>
+                                                                  <label class="form-check-label"
+                                                                     for="queid_<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type %><%= i %><%= j %><%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio]._id %>">
+                                                                  </label>
+                                                      </label>
+                                                      <% } %>
+                                                         <% if
+                                                            (userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_check)
+                                                            { %>
+                                                            <label class="form-check-label">
+                                                               <%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_value
+                                                                  %>
+                                                            </label>
+                                                            <input type="text" class="form-control option_que_class"
+                                                               value="<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_ans %>">
+                                                            <% } %>
+                                                </td>
+                                             </tr>
+
+                                             <% } %>
+
+                                                <% if
+                                                   (userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type=='checkbox'
+                                                   ) { %>
+                                                   <tr>
+                                                      <td class="checkboxees">
+                                                         <% for (var qrio=0; qrio <
+                                                            userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].options.length;
+                                                            qrio++) { %>
+                                                            <label class="form-check">
+                                                               <%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qrio].lable
+                                                                  %>
+
+                                                                  <input class="form-check-input"
+                                                                     type="<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type %>"
+                                                                     name="que_<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type %><%= i %><%= j %><%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio]._id %>"
+                                                                     id="queid_<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type %><%= i %><%= j %><%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio]._id %>"
+                                                                     value="<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qrio].lable %>"
+                                                                     <%
+                                                                     if(userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qrio].isCheck){
+                                                                     %>
+                                                                  <%="checked"%>
+                                                                     <% } %>>
+                                                                        <label class="form-check-label"
+                                                                           for="queid_<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type %><%= i %><%= j %><%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio]._id %>">
+                                                                        </label>
+                                                            </label>
+                                                            <% } %>
+                                                               <% if
+                                                                  (userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_check)
+                                                                  { %>
+                                                                  <label class="mt-2">
+                                                                     <%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_value
+                                                                        %>
+                                                                  </label>
+                                                                  <input type="text"
+                                                                     class="form-control option_que_class"
+                                                                     value="<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_ans %>">
+                                                                  <% } %>
+                                                      </td>
+                                                   </tr>
+                                                   <% } %>
+                                                      <% if
+                                                         (userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type=='single'
+                                                         ) { %>
+                                                         <tr>
+                                                            <td class="custom-single-select">
+                                                               <select class="custom-select">
+                                                                  <% for (var qsio=0; qsio <
+                                                                     userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].options.length;
+                                                                     qsio++) { %>
+                                                                     <option
+                                                                        value="<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qsio].lable%>"
+                                                                        <%
+                                                                        if(userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qsio].isCheck){
+                                                                        %>
+                                                                        <%="selected"%>
+                                                                           <% } %>>
+                                                                              <%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qsio].lable
+                                                                                 %>
+                                                                     </option>
+                                                                     <% } %>
+                                                               </select>
+                                                               <% if
+                                                                  (userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_check)
+                                                                  { %>
+                                                                  <label class="mt-2">
+                                                                     <%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_value
+                                                                        %>
+                                                                  </label>
+                                                                  <input type="text"
+                                                                     class="form-control option_que_class"
+                                                                     value="<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_ans %>">
+                                                                  <% } %>
+                                                            </td>
+                                                         </tr>
+                                                         <% } %>
+
+                                                            <% if
+                                                               (userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type=='multi'
+                                                               ) { %>
+                                                               <tr>
+                                                                  <td class="custom-multi-select">
+                                                                     <select class="custom-select" multiple>
+                                                                        <% for (var qsio=0; qsio <
+                                                                           userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].options.length;
+                                                                           qsio++) { %>
+                                                                           <option
+                                                                              value="<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qsio].lable%>"
+                                                                              <%
+                                                                              if(userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qsio].isCheck){
+                                                                              %>
+                                                                              <%="selected"%>
+                                                                                 <% } %>><%=
+                                                                                       userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qsio].lable
+                                                                                       %>
+                                                                           </option>
+                                                                           <% } %>
+                                                                     </select>
+                                                                     <% if
+                                                                        (userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_check)
+                                                                        { %>
+                                                                        <label class="mt-2">
+                                                                           <%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_value
+                                                                              %>
+                                                                        </label>
+                                                                        <input type="text"
+                                                                           class="form-control option_que_class"
+                                                                           placeholder=""
+                                                                           value="<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_ans %>">
+                                                                        <% } %>
+                                                                  </td>
+                                                               </tr>
+                                                               <% } %>
+
+                                                                  <% if
+                                                                     (userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type=='text'
+                                                                     ||
+                                                                     userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type=='date'
+                                                                     ) { %>
+                                                                     <tr>
+                                                                        <td class="custom-input-text">
+                                                                           <input
+                                                                              type="<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type %>"
+                                                                              class="form-control"
+                                                                              value="<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].question_ans %>">
+
+                                                                           <% if
+                                                                              (userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_check)
+                                                                              { %>
+                                                                              <label class="mt-2">
+                                                                                 <%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_value
+                                                                                    %>
+                                                                              </label>
+                                                                              <input type="text" class="form-control"
+                                                                                 value="<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_ans %>">
+                                                                              <% } %>
+                                                                        </td>
+                                                                     </tr>
+                                                                     <% } %>
+                                                                        <% if
+                                                                           (userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type=='textarea'
+                                                                           ) { %>
+                                                                           <tr>
+                                                                              <td class="custom-input-textarea">
+                                                                                 <textarea type="text"
+                                                                                    class="form-control"><%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].question_ans %>
+                                                </textarea>
+                                                                                 <% if
+                                                                                    (userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_check)
+                                                                                    { %>
+                                                                                    <label class="mt-2">
+                                                                                       <%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_value
+                                                                                          %>
+                                                                                    </label>
+                                                                                    <input type="text"
+                                                                                       class="form-control option_que_class"
+                                                                                       placeholder=""
+                                                                                       value="<%= userHtml.beforeQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_ans %>">
+                                                                                    <% } %>
+                                                                              </td>
+                                                                           </tr>
+
+                                                                           <% } %>
+
+                                 </tbody>
+                              </table>
+
+                              <% } %>
+                                 <% } %>
+
+                                    <% } %>
+
+                                       <!-- option's que forloop start -->
+
+                                       <% } %>
+                                          <!-- option's que end -->
+
+
+                                          <% } %>
+                                             <!-- que check_flag_minor end -->
+
+
+                                             <% } %>
+
+                                                <% } %>
+
+
+      </div>
+      <% } %>
+
+         <!-- Before Questions end -->
+
+         <!-- After Questions -->
+         <% if (userHtml.after && userHtml.afterQuestions.length> 0) { %>
+            <div class="question-details">
+
+               <table>
+                  <thead>
+                     <tr>
+                        <td>
+                           <% if (userHtml.after_question_text) { %>
+                              <h3 class="consultation-button">
+                                 <%= userHtml.after_question_text %>
+                              </h3>
+                              <% } %>
+                        </td>
+                     </tr>
+                  </thead>
+               </table>
+
+               <% for (var i=0; i < userHtml.afterQuestions.length; i++) { %>
+                  <table>
+                     <tr>
+                        <td>
+                           <% if (userHtml.afterQuestions[i].group_data.name) { %>
+                              <% if (userHtml.afterQuestions[i].group_data.name) { %>
+                                 <h4>
+                                    <%= userHtml.afterQuestions[i].group_data.name %>
+                                 </h4>
+                                 <% } %>
+                                    <% if (userHtml.afterQuestions[i].group_data.description) { %>
+                                       <span>
+                                          <%= userHtml.afterQuestions[i].group_data.description %>
+                                       </span>
+                                       <% } %>
+                                          <% } %>
+
+                        </td>
+                     </tr>
+                  </table>
+
+                  <% for (var j=0; j < userHtml.afterQuestions[i].q_data.length; j++) { %>
+                     <!-- que check_flag_minor start -->
+                     <% if ((userHtml.afterQuestions[i].q_data[j].flag_minor && userHtml.check_flag_minor) ||
+                        !userHtml.afterQuestions[i].q_data[j].flag_minor) { %>
+                        <table>
+                           <tr>
+                              <td>
+                                 <label class="control-label">
+                                    <b>
+                                       <%= userHtml.afterQuestions[i].q_data[j].question %>
+                                    </b>
+                                    <% if (userHtml.afterQuestions[i].q_data[j].is_mandatory) { %>
+                                       <span style="color: #ff0000;">*</span>
+                                       <% } %>
+                                 </label>
+                              </td>
+                           </tr>
+                           <% if (userHtml.afterQuestions[i].q_data[j].image) { %>
+                              <tr>
+                                 <td class="form-group" style="width:95%;display: inline-block;">
+
+                                    <img id="blah" src="<%= userHtml.afterQuestions[i].q_data[j].image %>" width="100%"
+                                       alt="question image" />
+
+                                 </td>
+                              </tr>
+                              <% } %>
+
+                                 <% if (userHtml.afterQuestions[i].q_data[j].option_type=='radio' ) { %>
+
+                                    <tr>
+                                       <td class="radio">
+                                          <% for (var k=0; k < userHtml.afterQuestions[i].q_data[j].options.length; k++)
+                                             { %>
+                                             <label class="form-check">
+                                                <%= userHtml.afterQuestions[i].q_data[j].options[k].lable %>
+                                                   <input type="<%= userHtml.afterQuestions[i].q_data[j].option_type %>"
+                                                      name="d_view_<%= userHtml.afterQuestions[i].q_data[j].option_type %><%= i %><%= j %>"
+                                                      class="form-check-input"
+                                                      id="after_view_radio_<%= userHtml.afterQuestions[i].q_data[j].option_type %>_<%= i %>_<%= j %>_<%= k %>"
+                                                      value="<%= userHtml.afterQuestions[i].q_data[j].options[k].lable %>"
+                                                      <% if(userHtml.afterQuestions[i].q_data[j].options[k].isCheck){ %>
+                                                   <%="checked"%>
+                                                      <% } %>>
+                                                         <label
+                                                            for="after_view_radio_<%= userHtml.afterQuestions[i].q_data[j].option_type %>_<%= i %>_<%= j %>_<%= k %>"
+                                                            class="form-check-label">
+                                                         </label>
+                                             </label>
+                                             <% } %>
+
+                                                <% if (userHtml.afterQuestions[i].q_data[j].other_text_check) { %>
+                                                   <div class="space-bottom">
+                                                      <label class="mt-2">
+                                                         <%= userHtml.afterQuestions[i].q_data[j].other_text_value %>
+                                                      </label>
+                                                      <input type="text" class="form-control text-value" placeholder=""
+                                                         value="<%= userHtml.afterQuestions[i].q_data[j].other_text_ans %>">
+                                                   </div>
+                                                   <% } %>
+                                       </td>
+                                    </tr>
+                                    <% } %>
+
+                                       <% if (userHtml.afterQuestions[i].q_data[j].option_type=='checkbox' ) { %>
+                                          <tr>
+                                             <td class="checkboxees">
+                                                <% for (var k=0; k <
+                                                   userHtml.afterQuestions[i].q_data[j].options.length; k++) { %>
+                                                   <label class="form-check">
+                                                      <%= userHtml.afterQuestions[i].q_data[j].options[k].lable %>
+                                                         <input
+                                                            type="<%= userHtml.afterQuestions[i].q_data[j].option_type %>"
+                                                            name="<%= userHtml.afterQuestions[i].q_data[j].option_type %><%= i %><%= j %>"
+                                                            class="form-check-input"
+                                                            id="after_checkbox_<%= userHtml.afterQuestions[i].q_data[j].option_type %>_<%= i %>_<%= j %>_<%= k %>"
+                                                            value="<%= userHtml.afterQuestions[i].q_data[j].options[k].lable %>"
+                                                            <%
+                                                            if(userHtml.afterQuestions[i].q_data[j].options[k].isCheck){
+                                                            %>
+                                                         <%="checked"%>
+                                                            <% } %>>
+                                                               <label
+                                                                  for="after_checkbox_<%= userHtml.afterQuestions[i].q_data[j].option_type %>_<%= i %>_<%= j %>_<%= k %>"
+                                                                  class="form-check-label">
+                                                               </label>
+                                                   </label>
+                                                   <% } %>
+                                                      <% if (userHtml.afterQuestions[i].q_data[j].other_text_check) { %>
+                                                         <label class="mt-2">
+                                                            <%= userHtml.afterQuestions[i].q_data[j].other_text_value %>
+                                                         </label>
+                                                         <input type="text" class="form-control text-value"
+                                                            value="<%= userHtml.afterQuestions[i].q_data[j].other_text_ans %>">
+                                                         <% } %>
+                                             </td>
+                                          </tr>
+
+                                          <% } %>
+
+                                             <% if (userHtml.afterQuestions[i].q_data[j].option_type=='single' ) { %>
+                                                <tr>
+                                                   <td class="custom-single-select">
+                                                      <select class="custom-select">
+                                                         <option value="">Choose option</option>
+                                                         <% for (var k=0; k <
+                                                            userHtml.afterQuestions[i].q_data[j].options.length; k++) {
+                                                            %>
+                                                            <option
+                                                               value="<%= userHtml.afterQuestions[i].q_data[j].options[k].lable %>"
+                                                               <%
+                                                               if(userHtml.afterQuestions[i].q_data[j].options[k].isCheck){
+                                                               %>
+                                                               <%="selected"%>
+                                                                  <% } %>><%=
+                                                                        userHtml.afterQuestions[i].q_data[j].options[k].lable
+                                                                        %>
+                                                            </option>
+                                                            <% } %>
+                                                      </select>
+                                                      <% if (userHtml.afterQuestions[i].q_data[j].other_text_check) { %>
+                                                         <div class="space-bottom">
+                                                            <label class="mt-2">
+                                                               <%= userHtml.afterQuestions[i].q_data[j].other_text_value
+                                                                  %>
+                                                            </label>
+                                                            <input type="text" class="form-control text-value"
+                                                               value="<%= userHtml.afterQuestions[i].q_data[j].other_text_ans %>">
+                                                         </div>
+                                                         <% } %>
+                                                   </td>
+                                                </tr>
+                                                <% } %>
+                                                   <% if (userHtml.afterQuestions[i].q_data[j].option_type=='multi' ) {
+                                                      %>
+                                                      <tr>
+                                                         <td class="custom-multi-select">
+                                                            <select class="custom-select" multiple>
+                                                               <% for (var k=0; k <
+                                                                  userHtml.afterQuestions[i].q_data[j].options.length;
+                                                                  k++) { %>
+                                                                  <option
+                                                                     value="<%= userHtml.afterQuestions[i].q_data[j].options[k].lable %>"
+                                                                     <%
+                                                                     if(userHtml.afterQuestions[i].q_data[j].options[k].isCheck){
+                                                                     %>
+                                                                     <%="selected"%>
+                                                                        <% } %>><%=
+                                                                              userHtml.afterQuestions[i].q_data[j].options[k].lable
+                                                                              %>
+                                                                  </option>
+                                                                  <% } %>
+                                                            </select>
+                                                            <% if
+                                                               (userHtml.afterQuestions[i].q_data[j].other_text_check) {
+                                                               %>
+                                                               <div class="space-bottom">
+                                                                  <label class="mt-2">
+                                                                     <%= userHtml.afterQuestions[i].q_data[j].other_text_value
+                                                                        %>
+                                                                  </label>
+                                                                  <input type="text" class="form-control text-value"
+                                                                     value="<%= userHtml.afterQuestions[i].q_data[j].other_text_ans %>">
+                                                               </div>
+                                                               <% } %>
+                                                         </td>
+                                                      </tr>
+                                                      <% } %>
+
+                                                         <% if (userHtml.afterQuestions[i].q_data[j].option_type=='text'
+                                                            ) { %>
+                                                            <tr>
+                                                               <td class="custom-input-text">
+                                                                  <input type="text" class="form-control" placeholder=""
+                                                                     value="<%= userHtml.afterQuestions[i].q_data[j].question_ans %>">
+                                                                  <% if
+                                                                     (userHtml.afterQuestions[i].q_data[j].other_text_check)
+                                                                     { %>
+                                                                     <div class="space-bottom">
+                                                                        <label class="mt-2">
+                                                                           <%= userHtml.afterQuestions[i].q_data[j].other_text_value
+                                                                              %>
+                                                                        </label>
+                                                                        <input type="text"
+                                                                           class="form-control text-value"
+                                                                           value="<%= userHtml.afterQuestions[i].q_data[j].other_text_ans %>">
+                                                                     </div>
+                                                                     <% } %>
+                                                               </td>
+                                                            </tr>
+                                                            <% } %>
+
+                                                               <% if
+                                                                  (userHtml.afterQuestions[i].q_data[j].option_type=='textarea'
+                                                                  ) { %>
+                                                                  <tr>
+                                                                     <td>
+                                                                        <textarea class="form-control">
+                                    <%= userHtml.afterQuestions[i].q_data[j].question_ans %>
+                                 </textarea>
+                                                                        <% if
+                                                                           (userHtml.afterQuestions[i].q_data[j].other_text_check)
+                                                                           { %>
+                                                                           <div class="space-bottom">
+                                                                              <label class="mt-2">
+                                                                                 <%= userHtml.afterQuestions[i].q_data[j].other_text_value
+                                                                                    %>
+                                                                              </label>
+                                                                              <input type="text" class="form-control"
+                                                                                 value="<%= userHtml.afterQuestions[i].q_data[j].other_text_ans %>">
+                                                                           </div>
+                                                                           <% } %>
+                                                                     </td>
+                                                                  </tr>
+                                                                  <% } %>
+                        </table>
+
+                        <!-- option's que start -->
+                        <% if (userHtml.afterQuestions[i].q_data[j].options.length> 0) { %>
+                           <!-- option's que forloop start -->
+                           <% for (var rio=0; rio < userHtml.afterQuestions[i].q_data[j].options.length; rio++) { %>
+
+                              <% if (userHtml.afterQuestions[i].q_data[j].options[rio].question_ids.length> 0 &&
+                                 userHtml.afterQuestions[i].q_data[j].options[rio].isCheck) { %>
+
+                                 <% for (var qorio=0; qorio <
+                                    userHtml.afterQuestions[i].q_data[j].options[rio].question_ids.length; qorio++) { %>
+                                    <table>
+                                       <tr>
+                                          <td>
+                                             <label>
+                                                <b>
+                                                   <%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].question
+                                                      %>
+                                                </b>
+                                                <% if
+                                                   (userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].is_mandatory)
+                                                   { %>
+                                                   <span style="color: #ff0000;">*</span>
+                                                   <% } %>
+                                             </label>
+                                          </td>
+                                       </tr>
+                                       <% if
+                                          (userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].image)
+                                          { %>
+                                          <tr>
+                                             <td class="form-group" style="width:95%;display: inline-block;">
+                                                <img id="blah"
+                                                   src="<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].image %>"
+                                                   width="100%" alt="question image" />
+                                             </td>
+                                          </tr>
+                                          <% } %>
+
+                                             <% if
+                                                (userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type=='radio'
+                                                ) { %>
+                                                <tr>
+                                                   <td class="radio">
+                                                      <% for (var qrio=0; qrio <
+                                                         userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].options.length;
+                                                         qrio++) { %>
+                                                         <label class="form-check">
+                                                            <%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qrio].lable
+                                                               %>
+
+                                                               <input class="form-check-input"
+                                                                  type="<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type %>"
+                                                                  name="que_<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type %><%= i %><%= j %><%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio]._id %>"
+                                                                  id="queid_<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type %><%= i %><%= j %><%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio]._id %>"
+                                                                  value="<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qrio].lable %>"
+                                                                  <%
+                                                                  if(userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qrio].isCheck){
+                                                                  %>
+                                                               <%="checked"%>
+                                                                  <% } %>>
+                                                                     <label class="form-check-label"
+                                                                        for="queid_<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type %><%= i %><%= j %><%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio]._id %>">
+                                                                     </label>
+                                                         </label>
+                                                         <% } %>
+                                                            <% if
+                                                               (userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_check)
+                                                               { %>
+                                                               <label class="form-check-label">
+                                                                  <%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_value
+                                                                     %>
+                                                               </label>
+                                                               <input type="text" class="form-control option_que_class"
+                                                                  value="<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_ans %>">
+                                                               <% } %>
+                                                   </td>
+                                                </tr>
+
+                                                <% } %>
+
+                                                   <% if
+                                                      (userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type=='checkbox'
+                                                      ) { %>
+                                                      <tr>
+                                                         <td class="checkboxees">
+                                                            <% for (var qrio=0; qrio <
+                                                               userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].options.length;
+                                                               qrio++) { %>
+                                                               <label class="form-check">
+                                                                  <%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qrio].lable
+                                                                     %>
+
+                                                                     <input class="form-check-input"
+                                                                        type="<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type %>"
+                                                                        name="que_<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type %><%= i %><%= j %><%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio]._id %>"
+                                                                        id="queid_<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type %><%= i %><%= j %><%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio]._id %>"
+                                                                        value="<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qrio].lable %>"
+                                                                        <%
+                                                                        if(userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qrio].isCheck){
+                                                                        %>
+                                                                     <%="checked"%>
+                                                                        <% } %>>
+                                                                           <label class="form-check-label"
+                                                                              for="queid_<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type %><%= i %><%= j %><%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio]._id %>">
+                                                                           </label>
+                                                               </label>
+                                                               <% } %>
+                                                                  <% if
+                                                                     (userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_check)
+                                                                     { %>
+                                                                     <label class="mt-2">
+                                                                        <%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_value
+                                                                           %>
+                                                                     </label>
+                                                                     <input type="text"
+                                                                        class="form-control option_que_class"
+                                                                        value="<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_ans %>">
+                                                                     <% } %>
+                                                         </td>
+                                                      </tr>
+                                                      <% } %>
+                                                         <% if
+                                                            (userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type=='single'
+                                                            ) { %>
+                                                            <tr>
+                                                               <td class="custom-single-select">
+                                                                  <select class="custom-select">
+                                                                     <% for (var qsio=0; qsio <
+                                                                        userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].options.length;
+                                                                        qsio++) { %>
+                                                                        <option
+                                                                           value="<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qsio].lable%>"
+                                                                           <%
+                                                                           if(userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qsio].isCheck){
+                                                                           %>
+                                                                           <%="selected"%>
+                                                                              <% } %>>
+                                                                                 <%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qsio].lable
+                                                                                    %>
+                                                                        </option>
+                                                                        <% } %>
+                                                                  </select>
+                                                                  <% if
+                                                                     (userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_check)
+                                                                     { %>
+                                                                     <label class="mt-2">
+                                                                        <%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_value
+                                                                           %>
+                                                                     </label>
+                                                                     <input type="text"
+                                                                        class="form-control option_que_class"
+                                                                        value="<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_ans %>">
+                                                                     <% } %>
+                                                               </td>
+                                                            </tr>
+                                                            <% } %>
+
+                                                               <% if
+                                                                  (userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type=='multi'
+                                                                  ) { %>
+                                                                  <tr>
+                                                                     <td class="custom-multi-select">
+                                                                        <select class="custom-select" multiple>
+                                                                           <% for (var qsio=0; qsio <
+                                                                              userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].options.length;
+                                                                              qsio++) { %>
+                                                                              <option
+                                                                                 value="<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qsio].lable%>"
+                                                                                 <%
+                                                                                 if(userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qsio].isCheck){
+                                                                                 %>
+                                                                                 <%="selected"%>
+                                                                                    <% } %>><%=
+                                                                                          userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].options[qsio].lable
+                                                                                          %>
+                                                                              </option>
+                                                                              <% } %>
+                                                                        </select>
+                                                                        <% if
+                                                                           (userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_check)
+                                                                           { %>
+                                                                           <label class="mt-2">
+                                                                              <%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_value
+                                                                                 %>
+                                                                           </label>
+                                                                           <input type="text"
+                                                                              class="form-control option_que_class"
+                                                                              placeholder=""
+                                                                              value="<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_ans %>">
+                                                                           <% } %>
+                                                                     </td>
+                                                                  </tr>
+                                                                  <% } %>
+
+                                                                     <% if
+                                                                        (userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type=='text'
+                                                                        ||
+                                                                        userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type=='date'
+                                                                        ) { %>
+                                                                        <tr>
+                                                                           <td class="custom-input-text">
+                                                                              <input
+                                                                                 type="<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type %>"
+                                                                                 class="form-control"
+                                                                                 value="<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].question_ans %>">
+
+                                                                              <% if
+                                                                                 (userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_check)
+                                                                                 { %>
+                                                                                 <label class="mt-2">
+                                                                                    <%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_value
+                                                                                       %>
+                                                                                 </label>
+                                                                                 <input type="text" class="form-control"
+                                                                                    value="<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_ans %>">
+                                                                                 <% } %>
+                                                                           </td>
+                                                                        </tr>
+                                                                        <% } %>
+                                                                           <% if
+                                                                              (userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].option_type=='textarea'
+                                                                              ) { %>
+                                                                              <tr>
+                                                                                 <td class="custom-input-textarea">
+                                                                                    <textarea type="text"
+                                                                                       class="form-control"><%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].question_ans %>
+                                          </textarea>
+                                                                                    <% if
+                                                                                       (userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_check)
+                                                                                       { %>
+                                                                                       <label class="mt-2">
+                                                                                          <%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_value
+                                                                                             %>
+                                                                                       </label>
+                                                                                       <input type="text"
+                                                                                          class="form-control option_que_class"
+                                                                                          placeholder=""
+                                                                                          value="<%= userHtml.afterQuestions[i].q_data[j].options[rio].question_ids[qorio].other_text_ans %>">
+                                                                                       <% } %>
+                                                                                 </td>
+                                                                              </tr>
+
+                                                                              <% } %>
+
+                                    </table>
+
+                                    <% } %>
+                                       <% } %>
+
+                                          <% } %>
+
+                                             <!-- option's que forloop start -->
+
+                                             <% } %>
+                                                <!-- option's que end -->
+
+
+                                                <% } %>
+                                                   <!-- que check_flag_minor end -->
+
+                                                   <% } %>
+
+                                                      <% } %>
+
+            </div>
+
+            <% } %>
+
+               <!-- After Questions end -->
+
+
+
+
+               <% if (userHtml.before_image.length> 0) { %>
+                  <table style="page-break-before: always;">
+                     <tr>
+                        <td>
+                           <h4>Before Image:</h4>
+                        </td>
+                     </tr>
+
+                     <% for (var i=0; i < userHtml.before_image.length; i++) { %>
+                        <% if (userHtml.before_image[i]) { %>
+                           <tr style="page-break-inside: avoid;">
+                              <td style="width:100%;display: inline-block;height: 500px;margin-bottom: 10px;">
+
+
+
+                                 <!-- <img id="html-before-image" src="https://adornapi.appointgem.com/images/consultation/before/img-1709991634588.jpeg" alt="Before Photo" style="width: 100%;height: 100%;object-fit: contain;object-position: center;"/> -->
+
+                                 <img id="html-before-image" src="<%= userHtml.before_image[i] %>" alt="Before Photo"
+                                    style="width: 100%;height: 100%;object-fit: contain;object-position: center;" />
+                              </td>
+                           </tr>
+                           <% } %>
+                              <% } %>
+
+                  </table>
+                  <% } %>
+
+                     <% if (userHtml.after_image.length> 0) { %>
+                        <table style="page-break-before: always;">
+                           <tr>
+                              <td>
+                                 <h4>After Image:</h4>
+                              </td>
+                           </tr>
+                           <% for (var a=0; a < userHtml.after_image.length; a++) { %>
+                              <% if (userHtml.after_image[a]) { %>
+                                 <tr style="page-break-inside: avoid;">
+                                    <td class="form-group"
+                                       style="width:100%;display: inline-block;height: 500px;margin-bottom: 10px;">
+
+                                       <!-- <img id="html-before-image" src="https://adornapi.appointgem.com/images/consultation/before/img-1709991634588.jpeg" alt="Before Photo" style="width: 100%;height: 100%;object-fit: contain;object-position: center;"/> -->
+
+                                       <img id="html-after-image" src="<%= userHtml.after_image[a] %>" alt="After Photo"
+                                          style="width: 100%;height: 100%;object-fit: contain;object-position: center;" />
+
+                                       <!-- <img id="html-after-image" src="<%= userHtml.root_path %>/<%= userHtml.after_image[a] %>" alt="After Photo" style="width: 100%;height: 100%;object-fit: contain;object-position: center;"/> -->
+                                    </td>
+                                 </tr>
+                                 <% } %>
+                                    <% } %>
+                        </table>
+                        <% } %>
+
+
+
+                           <% if (userHtml.customer_signature_flag || userHtml.therapist_signature_flag) { %>
+                              <table style="page-break-before: always;">
+                                 <% if (userHtml.customer_signature_flag) { %>
+                                    <tr style="page-break-inside: avoid;">
+                                       <td>
+                                          <h4>
+                                             <%= userHtml.signature_label %>:
+                                          </h4>
+                                       </td>
+                                       <td class="form-group" style="width:95%;display: inline-block;">
+                                          <img id="html-customer-signature" src="<%= userHtml.customer_signature %>"
+                                             alt="Signature" />
+
+                                       </td>
+                                    </tr>
+                                    <% } %>
+
+                                       <% if (userHtml.therapist_signature_flag) { %>
+                                          <tr style="page-break-inside: avoid;">
+                                             <td>
+                                                <h4>Therapist Singnature:</h4>
+                                             </td>
+                                             <td style="width:95%;display: inline-block;">
+                                                <img id="html-therapist-signature"
+                                                   src="<%= userHtml.therapist_signature %>"
+                                                   alt="Therapist Signature" />
+
+                                             </td>
+                                          </tr>
+                                          <% } %>
+
+                              </table>
+                              <% } %>
+
+
+</body>
+
+</html>

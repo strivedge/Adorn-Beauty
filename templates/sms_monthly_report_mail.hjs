@@ -1,0 +1,21 @@
+<table border="0" width="100%" cellpadding="1" cellspacing="1" style="width:100%">
+	<tbody>
+		<tr>
+            <td colspan="2" style="text-align:center;border-bottom:1px solid #cccccc;padding-bottom: 10px;">
+                <img alt="Logo" src="
+                {{text.site_url}}/images/front-logo.png" style="height: auto;max-width: 125px;width:125px; text-align: center;margin: 0 auto;display: block;">
+            </td>
+        </tr>
+		<tr style="margin: 20px 0px;display: inline-block; width: 100%;">
+            <td style="background: #efefef; border-bottom: 1px solid #eff2f7;padding: 15px;display: inline-block;width: 100%;border-radius: 0.25rem;"><h3 style="margin: 0;font-weight: 600;font-family: arial,sans-serif;color: #623229;font-size: 18px;width: 100%;display: inline-block;">SMS log report from {{text.from_date}} to {{text.to_date}}</h3>
+			</td>
+		</tr>
+
+		<tr style="width:100%;display:block;padding-bottom: 10px;font-family: arial,sans-serif;">
+			<td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;"><strong>Organizaton Name:</strong></td>
+			<td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;">{{text.company_name}}&nbsp;</td>
+		</tr>
+		
+
+	</tbody>
+</table>

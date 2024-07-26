@@ -1,0 +1,60 @@
+<table style="width:100%;border-collapse: separate!important;border-spacing: 0;font-size: 14px;font-family: Tahoma, Geneva, sans-serif;table-layout: fixed;border-collapse: collapse;" width="100%" cellspacing="1" cellpadding="1" border="0">
+    <tbody>
+        <tr>
+            <td colspan="2" style="text-align:center;padding-bottom: 10px;">
+                <img alt="Logo" src="
+                {{text.site_url}}/images/front-logo.png" style="height: auto;max-width: 125px;width:125px; text-align: center;margin: 0 auto;display: block;">
+            </td>
+        </tr>
+        <tr style="display: none;">
+            <td>{{#text.location_name}}</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="border-bottom:1px solid #cccccc; text-align:left;">
+                <h3 style="margin: 0;padding-bottom: 10px; text-align:center;font-size: 16px;">Your upcoming appointment has been scheduled with {{#text.company_name}} {{text.company_name}} {{/text.company_name}} {{^text.company_name}} AppointGem {{/text.company_name}} ({{text.location_name}})</h3>
+            </td>
+        </tr>
+        <tr style="display: none;">
+            <td>{{/text.location_name}}</td>
+        </tr>
+
+        
+        <tr>
+            <td colspan="2" style="font-weight: bold; font-size: 16px;padding: 10px 0px 0px; text-align:left;">Dear {{text.client_name}},</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-weight: bold; font-size: 14px;padding-top: 5px;text-align: left;">About your recent booking.</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-weight: bold; font-size: 14px;padding-top: 5px;text-align:left">{{text.message}}</td>
+        </tr>
+    </tbody>
+    
+    <tfoot>
+        <tr>
+            <td colspan="2" style="width:100%;text-align:center;">
+                <p style="margin: 10px 0;padding: 10px 10px;background: #efefef">
+                    <strong style="display: none;">
+                        {{#text.front_url}}
+                    </strong>
+                   
+                    <strong style="display: block;padding-bottom: 6px;">if you have any query about treatments or want to learn more about treatments, please visit
+                        <a href="https://{{text.location_domain}}.{{text.front_url}}" style="color: #613228;">https://{{text.location_domain}}.{{text.front_url}}</a>
+                    </strong>
+                   
+                    <strong style="display: none;">
+                        {{/text.front_url}}
+                    </strong>
+
+                    <strong style="display: none;">
+                        {{#text.unsubscribe_url}}
+                    </strong>
+                    <strong style="display: block;">Manage your preference <a href="{{text.unsubscribe_url}}" style="color: #613228;">Unsubscribe</a>. </strong>
+                    <strong style="display: none;">
+                       {{/text.unsubscribe_url}}
+                    </strong>
+                </p>
+            </td>
+        </tr>
+    </tfoot>
+</table>

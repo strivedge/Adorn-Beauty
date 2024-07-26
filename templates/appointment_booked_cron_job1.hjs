@@ -1,0 +1,76 @@
+<table border="0" width="100%" cellpadding="1" cellspacing="1" style="width:100%">
+    <tbody>
+        <tr>
+            <td style="text-align:center; border-bottom: 1px solid #cccccc;    padding-bottom: 20px; display: inline-block; width: 100%;"><img alt="Logo" src="{{text.site_url}}/images/front-logo.png" style="    height: auto; width: 100%; max-width: 35%;" ></td>
+        </tr>
+        <tr style="padding:10px 0px 0px;display:inline-block;width:100%;text-align:center">
+            <td style="font-weight:bold;font-size:18px;display:block">Dear {{ text.name }},</td>
+        </tr>
+        <tr>
+            <td style="width: 100%;display: inline-block;padding-bottom: 10px;text-align: center;font-family:arial,sans-serif;font-size: 18px;">It seems you have missed out your appointment which were <b>{{ text.date }}</b> at <b>{{ text.time }}</b> at <b>{{ text.company_name }}</b>,<b> {{ text.location_name }}</b>. You can still reschedule your appointment by calling on <b>{{ text.contact_number }}</b> or by visiting <b>{{ text.company_website }}</b>.</td>
+            <td style="font-weight:bold;font-size:18px;display:block;text-align: center;">We look forward seeing you soon.</td>
+        </tr>
+        <tr style="width:100%;display:block;padding-bottom: 10px;font-family: arial,sans-serif;">
+            <td style="display: inline-block;padding-left:15px;width:46%;"><strong>Consultant Form:</strong></td>
+            <td style="display: inline-block;padding-left:15px;width:46%;">{{text.consultant_url}}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr style="display:block;float: right;">
+            <td colspan="2" style="text-align:right; vertical-align:top;font-weight: bold;font-family: arial,sans-serif; width: 100%; display: inline-block;"><b style="font-size: 18px;padding-bottom: 5px;display: inline-block;font-family: arial,sans-serif;">Thanks,</b><br/>
+                {{#text.company_website}} <a href="{{text.company_website}}" style="font-size: 15px;">{{text.company_name}}</a><br/>
+                {{/text.company_website}} {{^text.company_website}} <a href="{{text.link_url}}/booking" style="font-size: 15px;">APPOINTGEM</a><br/>
+                {{/text.company_website}} {{#text.company_logo}} <img alt="Logo" src="https://appointgem.com/{{text.company_logo}}"  style="width: 100%;height: auto;max-width: 80px;"> {{/text.company_logo}} {{^text.company_logo}} <img alt="Logo" src="{{text.site_url}}/images/front-logo.png"  style="width: 100%;height: auto;max-width: 80px;"> {{/text.company_logo}}
+            </td>
+        </tr>
+        <tr style="margin: 20px 0px;display: inline-block; width: 100%;">
+            <td style="background: #efefef; border-bottom: 1px solid #eff2f7;padding: 15px;display: inline-block;width: 100%;border-radius: 0.25rem;"><h3 style="margin: 0;font-weight: 600;font-family: arial,sans-serif;color: #623229;font-size: 18px;width: 100%;display: inline-block;">Important Information:</h3></td>
+        </tr>
+        <tr style="padding-bottom: 20px; display: block;">
+            <td style="width: 100%;display: inline-block;padding-bottom: 10px;font-family: arial,sans-serif;line-height: 1.5;display: flex;"><strong style="padding-right: 7px;">1.</strong>  You need to arrive 10 minutes prior to their appointment timings.</td>
+            <td style="width: 100%;display: inline-block;padding-bottom: 10px;font-family: arial,sans-serif;line-height: 1.5;display: flex;"><strong style="padding-right: 7px;">2.</strong> During busy period your appointment might get delay upto 10 minutes.</td>
+            <td style="width: 100%;display: inline-block;padding-bottom: 10px;font-family: arial,sans-serif;line-height: 1.5;display: flex;"><strong style="padding-right: 7px;">3.</strong> We will wait for your for upto 10 minutes. If you will not turn up, we will simply cancel your appointment. If you turn up after 10 minutes, then we will treat you as a walk-in customer only.</td>
+            <td style="width: 100%;display: inline-block;padding-bottom: 10px;font-family: arial,sans-serif;line-height: 1.5;display: flex;"><strong style="padding-right: 7px;">4.</strong> If you have paid in advance and did not turn up, we will collect 10% of booking fees from your total treatment cost. (if you turn up after 10 minutes of your appointment, don’t worry we will take you for your appointment but you will have to cooperate with us and stay clam while you wait for your turn.)</td>
+            <td style="width: 100%;display: inline-block;padding-bottom: 10px;font-family: arial,sans-serif;line-height: 1.5;display: flex;"><strong style="padding-right: 7px;">5.</strong> If you are unpaid customer, you will not be allowed to book an appointment next time.</td>
+            <td style="width: 100%;display: inline-block;padding-bottom: 10px;font-family: arial,sans-serif;line-height: 1.5;display: flex;"><strong style="padding-right: 7px;">6.</strong> Appointment cancellations will be unchangeable if you cancel you appointment at least 24 hours prior to your booking.</td>
+            <td style="width: 100%;display: inline-block;padding-bottom: 10px;font-family: arial,sans-serif;line-height: 1.5;display: flex;"><strong style="padding-right: 7px;">7.</strong>7.Consultation form is designed to serve you precisely. Any data filled by you in the consultation form will be stored securely and will never be shared with any other organisation. </td>
+        </tr>
+        <tr style="display: inline-block; width: 100%; text-align: center;">
+            <td style="font-weight: bold;font-size: 18px;display: block;">Kindly do not reply to this email as we do not monitor this email id. To resolve your queries, kindly contact your concerned branch immidiately.</td>
+        </tr>
+        <tr style="margin: 20px 0px;display: inline-block; width: 100%;">
+            <td style="background: #efefef; border-bottom: 1px solid #eff2f7;padding: 15px;display: inline-block;width: 100%;border-radius: 0.25rem;"><h3 style="margin: 0;font-weight: 600;font-family: arial,sans-serif;color: #623229;font-size: 18px;width: 100%;display: inline-block;">Branch Name and Contact Details:</h3></td>
+        </tr>
+        <tr style="padding-bottom:20px;display:block;">
+            <td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;"><strong>
+            Adron Beauty Aylesbury Hale Leys Branch :</strong></td><td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;"> 01296 393200</td>
+        </tr>
+        <tr style="padding-bottom:20px;display:block;">
+            <td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;"><strong>Adron Beauty Aylesbury Friars Square Branch:</strong></td><td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;"> 01296 415016</td>
+        </tr>
+        <tr style="padding-bottom:20px;display:block;">
+            <td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;"><strong>Adorn Beauty Greenford Branch:</strong></td><td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;"> 02086 169210</td>
+        </tr>
+        <tr style="padding-bottom:20px;display:block;">
+            <td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;"><strong>Adron Beauty High Wycombe Branch:</strong></td><td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;"> 01494 535089</td>
+        </tr>
+        <tr style="padding-bottom:20px;display:block;">
+            <td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;"><strong>Adron Beauty Lakeside Branch:</strong></td><td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;"> 01708 607666</td>
+        </tr>
+        <tr style="padding-bottom:20px;display:block;">
+            <td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;"><strong>Adron Beauty Slough Branch:</strong> </td><td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;">01753 534737</td>
+        </tr>
+        <tr style="padding-bottom:20px;display:block;">
+            <td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;"><strong>Adorn Beuaty Uxbridge Branch :</strong></td><td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;"> 01895 813737</td>
+        </tr>
+        <tr style="padding-bottom:20px;display:block;">
+            <td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;"><strong>Adorn Beauty Intu Watford Branch:</strong></td><td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;"> 01923252325</td>
+        </tr>
+        <tr style="padding-bottom:20px;display:block;">
+            <td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;"><strong>Adorn Beauty Watford Highstreet Branch:</strong></td><td style="display: inline-block;font-family: arial,sans-serif;padding-left:15px;width:46%;"> 01923517325</td>
+        </tr>
+        <tr style="display:inline-block;width:100%;text-align:center">
+            <td style="display: inline-block;font-family: arial,sans-serif;"><strong>if you have any query about treatments, you can visit www.adorn-beauty.com </strong></td>
+        </tr>
+    </tfoot>
+</table>

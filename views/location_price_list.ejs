@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            .brochure-data-content .content-wrap h5.company-name{
+                font-size: 20px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 700;
+                color: #623229;margin-bottom: 0;
+            }
+
+            .brochure-data-content .content-wrap h5.company-name .d-flex{
+                align-items: center;
+                justify-content: space-between;
+                padding-bottom: 10px;
+            }
+
+
+            .brochure-data .content-wrap{
+                height: 100%;
+
+            }
+            .brochure-data .brochure-data-content{
+                display: flex;
+                flex-wrap: wrap;
+                background: #fff;
+            }
+            .brochure-data .brochure-data-content .location-company-data-content{
+                width: 100%;
+                padding: 30px 20px 10px 20px;
+                background: #fff;
+                box-sizing: border-box;
+            }
+
+            @media(max-width: 1199px){
+                .brochure-data .brochure-data-content .locations-data .brochure-data .locations-data-content {
+                    width: 100%;
+                }
+            }
+
+            .brochure-data .brochure-data-content .locations-data-content b{
+                color: #623229;
+                padding-right: 7px;
+                font-size: 14px;
+                font-weight: 600;
+            }
+                        
+            .brochure-data .brochure-data-content .locations-data{
+                display: flex;
+                flex-wrap: wrap;
+                /* padding-bottom: 20px; */
+                margin-bottom: 20px;
+                border-bottom: 1px solid #623229;
+                padding-bottom: 3px;
+            }
+
+            .brochure-data .brochure-data-content .locations-data {
+                display: flex;
+                flex-wrap: wrap;
+                /* // padding-bottom: 20px; */
+                margin-bottom: 20px;
+                border-bottom: 1px solid #623229;
+                padding-bottom: 3px;
+            }
+
+            .brochure-data .brochure-data-content .locations-data h5{
+                font-size: 20px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 700;
+                color: #623229;
+            }
+
+            .brochure-data .brochure-data-content .locations-data label{
+                font-size: 16px;
+                font-family: "Montserrat", sans-serif;
+                color: #623229;
+                font-weight: 600;
+            }
+
+
+            .brochure-data .brochure-data-content .locations-data .locations-data-content{
+                width: 70%;
+            }
+
+            @media(max-width: 991px){
+                .brochure-data .brochure-data-content .locations-data .brochure-data .locations-data-content {
+                    width: 100%;
+                }
+            }
+
+            .brochure-data .brochure-data-content .locations-data .locations-data-content .locations-address,.brochure-data .brochure-data-content .locations-data  .locations-data-content .locations-number{
+                margin-bottom: 0;
+                padding-bottom: 3px;
+            }
+
+            .brochure-data .brochure-data-content .locations-data .locations-data-content .locations-address p,.brochure-data .brochure-data-content .locations-data  .locations-data-content .locations-number p{
+                font-size: 14px;
+                font-family: "Montserrat", sans-serif;
+            }
+
+            .brochure-data .brochure-data-content .locations-data .locations-data-content .locations-number b{
+                color: #623229;
+                padding-right: 7px;
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+
+
+
+
+
+            .brochure-data .brochure-data-content .locations-data .locations-timing{
+                width: 30%;
+                
+            }
+
+            .brochure-data .brochure-data-content .locations-data .locations-timing .day-time{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 0;
+                padding-bottom: 3px;
+            }
+            @media(max-width: 991px){
+                .brochure-data .brochure-data-content .locations-data .locations-timing{
+                    width: 100%;
+                    padding-top: 20px;
+                    padding-left: 0;
+                }
+            }
+
+            .brochure-data .brochure-data-content .locations-data h5{
+                font-size: 20px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 700;
+                color: #623229;
+            }
+
+            .brochure-data .brochure-data-content .locations-data label{
+                font-size: 16px;
+                font-family: "Montserrat", sans-serif;
+                color: #623229;
+                font-weight: 600;
+            }
+            .brochure-data .brochure-data-content .locations-data label.opening-hours-name{
+                font-size: 14px;
+            }
+
+            .brochure-data .brochure-data-content .locations-data p{
+                /* //font-size: 16px; */
+                font-size: 14px;
+                font-family: "Montserrat", sans-serif;
+            }
+
+
+            .brochure-data .brochure-data-content .company-data ul{
+                display: flex;
+                margin: 0;
+                padding: 0px 0px 0px 0px;
+                list-style-type: none;
+            }
+
+            .brochure-data .brochure-data-content .company-data ul li{
+                padding: 0px 7px;/*
+                border-right: 1px solid #623229;*/
+            }
+
+            .brochure-data .brochure-data-content .company-data ul li:last-child{
+                border-right: 0;
+                padding-right: 0;
+            }
+
+            .brochure-data .brochure-data-content .company-bg-logo-content{
+                        width: 50%;
+                        position: relative;
+                        box-sizing: border-box;
+            }
+
+            @media(max-width: 1199px){
+                .brochure-data .brochure-data-content .company-bg-logo-content {
+                padding: 35px 0px;
+                width: 100%;
+            }
+            }
+
+            .brochure-data .brochure-data-content .company-bg-logo-content .company-bg{
+                height: 100%;
+            }   
+            .brochure-data .brochure-data-content .company-bg-logo-content .company-bg img{
+                width: 100%;
+                height: 100%;
+            }
+            .brochure-data .brochure-data-content .company-bg-logo-content .company-logo{
+                position: absolute;
+                top: 50px;
+                right: 70px;
+            }
+
+            .categories-data .categories-data-content{
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            @media(max-width: 1199px){
+                .categories-data .categories-data-content{
+                    /*border-bottom: 1px solid #623229;*/
+                }
+            }
+                    
+            .categories-data .categories-data-content .contents{
+                width: 100%;
+                padding: 30px 20px 10px 20px;
+                background: #fff;
+            }
+
+            @media(max-width: 1199px){
+                .categories-data .categories-data-content .contents {
+                    width: 100%;
+                    background: #fff;
+                }
+            }
+
+            .categories-data .categories-data-content .contents h5{
+                font-size: 20px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 700;
+                color: #623229;
+            }
+
+           
+
+            .categories-data .categories-data-content .contents .services-name{
+                font-size: 14px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 500;
+                color: #000;
+            }
+
+            .categories-data .categories-data-content .contents .service-price{
+                font-size: 13px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 700;
+                color: #623229;
+            }
+
+            .categories-data .categories-data-content:first-child .contents{
+               /* border-top: 1px solid #623229;*/
+            }
+            .categories-data .categories-data-content:nth-of-type(odd) .contents{
+                 order: 1;
+            }
+            @media(max-width: 1199px){
+                .categories-data .categories-data-content:nth-of-type(odd) .contents{
+                    order: unset;
+                }
+            }
+
+            .categories-data .categories-data-content:nth-of-type(odd) .categories-description{
+                order: 2;
+            }
+
+            @media(max-width: 1199px){
+                .categories-data .categories-data-content:nth-of-type(odd) .categories-description{
+                    order: unset;
+                }
+            }
+
+            .categories-data .categories-data-content:nth-of-type(even) .contents{
+                order: 2;
+            }
+
+            @media(max-width: 1199px){
+                .categories-data .categories-data-content:nth-of-type(even) .contents{
+                    order: unset;
+                }
+            }
+
+            .categories-data .categories-data-content:nth-of-type(even) .categories-description{
+                order: 1;
+            }
+
+            @media(max-width: 1199px){
+                .categories-data .categories-data-content:nth-of-type(even) .categories-description{
+                    order: unset;
+                }
+            }
+               
+
+            .categories-data .categories-data-content .categories-description{
+                width: 100%;
+                background: #f1f5f7;
+                padding: 10px 0px 12px;
+                font-size: 12px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 500;
+                color: #000;
+            }
+
+            @media(max-width: 1199px){
+                .categories-data .categories-data-content .categories-description {
+                    width: 100%;
+                    background: transparent;
+                }
+            }
+            .categories-data .categories-data-content .categories-description p{
+                color: red;
+            }
+            .categories-data .categories-data-content .categories-description p img{
+                width: 100%;
+                height: auto;
+            }
+
+
+            .brochure-last-introduction-page{
+                background: #fff;
+                display: flex!important;
+                flex-wrap: wrap;
+            }
+
+            @media(max-width: 1199px){
+                .brochure-last-introduction-page{
+                    display: block;
+                }
+            }
+                
+            .brochure-last-introduction-page .img-content{
+                width: 50%;
+                box-sizing: border-box;
+            }
+
+            @media(max-width: 1199px){
+                .brochure-last-introduction-page .img-content{
+                    width: 100%;
+                }
+            }
+
+            .brochure-last-introduction-page .img-content img{
+                width: 100%;
+            }
+
+            .brochure-last-introduction-page .img-content h5{
+                font-size: 20px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 700;
+                color: #623229;
+            }
+
+            .brochure-last-introduction-page .img-content h6{
+                font-size: 18px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 600;
+                color: #623229;
+            }
+
+            .brochure-last-introduction-page .img-content .content{
+                padding: 40px;
+                display: flex;
+                align-items: center;
+            }
+
+            @media(max-width: 1199px){
+                .brochure-last-introduction-page .img-content .content{
+                    display: block;
+                }
+            }
+                        
+            .brochure-last-introduction-page .img-content .content p{
+                font-size: 16px;
+                font-family: "Montserrat", sans-serif;
+            }
+
+            .brochure-last-introduction-page .img-content .content a{
+                font-size: 18px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 600;
+                color: #000;
+            }
+
+            .brochure-last-introduction-page .img-content .content .content-p{
+                            /*width: calc(100% - 250px);*/
+                            width: 100%;
+            }
+                            
+            @media(max-width: 1199px){
+                .brochure-last-introduction-page .img-content .content .content-p{
+                    padding-bottom: 35px;
+                    width: 100%;
+                }
+            }
+
+            .brochure-last-introduction-page .img-content .content .img{
+                           width: 250px;
+                           margin: 0 auto;
+                           text-align: center;
+            }
+
+            .brochure-last-introduction-page .img-content .content .img img{
+                /* //width: 100%; */
+                width: auto;
+            }
+
+            .brochure-last-introduction-page .img-only{
+                width: 50%;
+                box-sizing: border-box;
+            }
+            @media(max-width: 1199px){
+                .brochure-last-introduction-page .img-only{
+                    width: 100%;
+                }
+            }
+
+            .brochure-last-introduction-page .img-only img{
+                width: 100%;
+                height: 100%;
+            }
+
+            .brochure-last-introduction-page .content-wrap{
+                height: 100%;
+            }
+
+            .brochure-last-introduction-page.show {
+                display: block;
+            }
+                
+            .brochure-last-introduction-page.hidden {
+                display: none;
+            }
+
+            .buttons-2{
+                display: inline-block;
+                /* //margin: 12px auto 28px; */
+                margin: 0px auto 0px;
+                text-align: center;
+                width: 100%;
+                /* //background: #fff; */
+                padding: 12px 0px 28px;
+            }
+
+            .current-location {
+                background: #fff;
+                text-align: center;
+                display: inline-block;
+                width: 100%;
+                padding: 12px 0px;
+            }
+
+            .current-location .location-name {
+                font-size: 16px;
+                font-family: "Montserrat", sans-serif;
+                color: #623229;
+                font-weight: 600;
+            }
+
+            .current-location p {
+                font-size: 14px;
+                font-family: "Montserrat", sans-serif;
+                margin-bottom: 0;
+                padding-bottom: 3px;
+            }
+
+            .current-location b{
+                color: #623229;
+                padding-right: 7px;
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            .current-location label.opening-hours-name {
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            .current-location .day-time .day{
+                padding-left: 7px;
+            }
+
+            .current-location .book-now {
+                margin-top: 10px;
+                background-color: #613228;
+                border-color: #613228;
+                border: 1px solid transparent;
+                padding: 0.47rem 0.75rem;
+                font-size: 0.9rem;
+                line-height: 1.5;
+                border-radius: 0.25rem;
+                font-weight: 400;
+            }
+
+            .current-location .location-contact_number {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+            }
+            .current-location .location-contact_number b{
+                display: block;
+                padding-right: 0;
+            }
+
+            .price-dashed{
+                position: relative;
+                padding-right: 4px;
+            }
+            .price-dashed:after{
+                    position: absolute;
+                content: "";
+                background: #ebc5a7;
+                left: 0;
+                right: 0;
+                height: 2px;
+                width: 100%;
+                top: 9px;
+            }
+
+            table, tr, td { page-break-inside: avoid; } 
+
+            tr, td { page-break-inside: avoid; } 
+
+            table {width: 100%;}
+
+        </style>
+    </head>
+    <body>
+        <% if (brochureData && brochureData.location) { %>
+        <table width="100%">
+            <tr>
+                <td width="100%" align="center">
+                    <div class="current-location" >
+                        <div class="location-name" style="font-family: 'Montserrat', sans-serif; color: #623229; font-weight: 600;"><%= brochureData.location.name %></div>
+                        <div class="location-full_address" style="font-family: 'Montserrat', sans-serif; color: #623229;font-size: 14px;"><%= brochureData.location.full_address %></div>
+                        <div class="location-contact_number" style="font-family: 'Montserrat', sans-serif; color: #623229;"><b style="font-family: 'Montserrat', sans-serif; color: #623229; font-weight: 600;">Contact:</b> <%= brochureData.location.contact_number %></div>
+
+                        <% if (brochureData.location_timing) { %>
+                        <div class="location-timing" >
+                            <label class="opening-hours-name" style="font-family: 'Montserrat', sans-serif; color: #623229;">Opening Hours:</label>
+                            <% brochureData.location_timing.forEach(ct => {%>
+                                <p class="day-time">
+                                    <span class="day"  style="font-family: 'Montserrat', sans-serif; color: #623229;"><%= ct.day %></span> &nbsp;
+                                    <span class="time"  style="font-family: 'Montserrat', sans-serif; color: #623229;"><%= ct.start_time %> - <%= ct.end_time %></span>
+                                </p>
+                            <%  });%>
+
+                            <% if (brochureData.location.special_hour.length) { %>
+                                <label class="opening-hours-name" style="font-family: 'Montserrat', sans-serif; color: #623229;">Special Hours:</label>
+                                 <% brochureData.location.special_hour.forEach(sh => {%>
+                                <p class="day-time">
+                                    <span class="day" style="font-family: 'Montserrat', sans-serif; color: #623229;"><%= sh.special_hour_start_date  %> - <%= sh.special_hour_end_date  %></span> &nbsp;
+                                    <span class="time" style="font-family: 'Montserrat', sans-serif; color: #623229;"><%= sh.special_hour_from_time %> - <%= sh.special_hour_end_time %></span>
+                                </p>
+                                <%  });%>
+                            <% }%>
+
+                        </div>
+                        <% }%>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <% }%>
+        <% brochureData.types.forEach(cs => {%>
+            <table style="background-color: <%=cs.type.brochure_background_color %> ;">
+                <tr >
+
+                    <td colspan="2" style="width: 80%; font-size: 20px;font-family: 'Montserrat', sans-serif;font-weight: 700;color: <%= cs.type.brochure_heading_color %>;padding-left: 10px;">
+                        <%= cs.type.name %>
+                    </td>
+                </tr> 
+                <% if (cs.type.desc) { %>
+                    <tr>
+                        <td colspan="2"  style="width: 80%; font-size: 12px; font-weight: 400;font-family: 'Montserrat', sans-serif; color: <%= cs.type.brochure_font_color %>;padding-left: 20px;padding-right: 20px;" class="categories-description">
+                            
+                                        <%- cs.type.desc %>
+                            
+                        </td>
+                    </tr>
+                <% }%>
+
+                <% cs.groups.forEach(gp => {%>
+                    <% if (gp.group.name) { %>
+                        <tr >
+                            <td colspan="2">
+                                <div  style="width: 80%; font-size: 20px;font-family: 'Montserrat', sans-serif;font-weight: 700;color: <%= cs.type.brochure_heading_color %>;padding-left: 15px;">
+                                    <%= gp.group.name %></div>
+                            </td>
+                        </tr> 
+                    <% }%>
+                        <tr style="background-image: url('http://localhost:<%= brochureData.port %>/<%=cs.type.brochure_background_image %>');background-repeat: no-repeat !important;background-color: <%=cs.type.brochure_background_color %> ;">
+                            <td>
+                                <% gp.services.forEach(ss => {%>
+                                    <% if (ss.price && ss.name) { %>
+                                       
+                                        <table >
+                                            <tr>
+                                                <td width="85%">
+                                                    <div class="services-data" style="padding-left: 20px;padding-bottom: 0;margin-bottom: 0;">
+                                                        <p class="content-ul" style="padding-top: 0;">
+                                                            <span style="float: left;color: <%= cs.type.brochure_font_color %>; " class="services-name" style="font-family: 'Montserrat', sans-serif;"><%= ss.name %></span>
+
+                                                            <!-- <span style="page-break-inside: avoid; height: auto; width: 5%; margin-bottom: 10px;" class="services-name"></span> -->
+                                                           
+                                                        </p>
+                                                    </div>
+                                                </td>
+                                                <td width="15%">
+                                                    <div class="services-data" style="">
+                                                        <p class="content-ul" style="font-family: 'Montserrat', sans-serif;font-weight: bold;">
+
+                                                             <% if (ss.special_price && ss.special_price != ss.actual_price) { %>
+                    <span style="float: left;color: <%= cs.type.brochure_font_color %>;" class="price-dashed service-price" style="font-family: 'Montserrat', sans-serif;font-weight: bold;">£<%= ss.actual_price %></span>
+                                                             <% }%>
+                                                             
+                                                            <span style="float: left;color: <%= cs.type.brochure_font_color %>;" class="service-price" style="font-family: 'Montserrat', sans-serif;font-weight: bold;">£<%= ss.price %></span>
+                                                         </p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                           
+                                   
+                                    <% }%>
+                                <%  });%>
+                            </td>
+                        </tr>
+
+                <%  });%>
+
+            </table>
+                    
+            
+            
+           
+             
+        <%  });%>
+
+        <% if (brochureData && brochureData.company && (brochureData.locations && brochureData.locations.length)) { %>
+        <table style="page-break-before: always;">
+            <tr>
+                <td>
+                    <div class="brochure-data-content">
+                        <div class="location-company-data-content">
+                            <div class="content-wrap">
+                                <div style="">
+                                    <h5 class="company-name" style="font-size: 20px; font-family: 'Montserrat', sans-serif; font-weight: 700; color: #623229;width: 70%;float: left;margin: 0 0 15px;"><%= brochureData.company.name %></h5>
+                                     <a href="https://adorn.appointgem.com/booking" class="btn btn-primary book-now" style="width: auto;float: right;background-color: #613228; border-color: #613228;    border: 1px solid transparent; padding: 0.47rem 0.75rem; font-size: 0.9rem; line-height: 1.5; border-radius: 0.25rem;font-weight: 400;text-decoration: none;color: #fff;font-family: 'Montserrat', sans-serif; color: #fff; font-weight: 600;margin-bottom: 15px;">Book Now</a>
+                                    
+                                    <!--  mr-1 -->
+                                </div>
+                                <% brochureData.locations.forEach(ls => {%>
+                                    <div class="locations-data" style="display:inline-block; width: 100%;border-bottom: 1px solid #623229;">
+                                        <div class="locations-data-content" style="width :70%; float: left;">
+                                            <label class="locations-name" style="font-size: 16px; font-family: 'Montserrat', sans-serif; color: #623229; font-weight: 600;"><%= ls.name %></label>
+                                            
+                                            <p class="locations-address" style="font-size: 14px; font-family: 'Montserrat', sans-serif;"><%= ls.full_address %></p>
+                                            <p class="locations-number"><b style="color: #623229; padding-right: 7px; font-size: 14px; font-weight: 600;font-family: 'Montserrat', sans-serif;">Contact:</b><%= ls.contact_number %></p>
+                                        </div>
+                                        <div class="locations-timing1" style="width: 30%; float: right;">
+                                            <label class="opening-hours-name" style="font-size: 13px; font-family: 'Montserrat', sans-serif; color: #623229; font-weight: 600;">Opening Hours:</label>
+                                             <% ls.timing.forEach(lt => {%>
+                                                <p class="day-time">
+                                                    <span class="day" style="font-size: 14px; font-family: 'Montserrat', sans-serif;"><%= lt.day %></span> &nbsp;
+                                                    <span class="time" style="font-size: 14px; font-family: 'Montserrat', sans-serif;"><%= lt.start_time %> - <%= lt.end_time %></span>
+                                                </p>
+                                             <%  });%>
+                                        </div>
+                                        <% if (ls.special_hour.length) { %>
+                                         <div>
+                                            <label class="opening-hours-name" style="font-size: 13px; font-family: 'Montserrat', sans-serif; color: #623229; font-weight: 600;">Special Hours:</label>
+                                             <% ls.special_hour.forEach(sh => {%>
+                                            <p class="day-time">
+                                                <span class="day" style="font-size: 14px; font-family: 'Montserrat', sans-serif;"><%= sh.special_hour_start_date  %> - <%= sh.special_hour_end_date  %></span> &nbsp;
+                                                <span class="time" style="font-size: 14px; font-family: 'Montserrat', sans-serif;"><%= sh.special_hour_from_time %> - <%= sh.special_hour_end_time %></span>
+                                            </p>
+                                            <%  });%>
+                                        </div>
+                                        <% }%>
+
+                                    </div>
+                                <%  });%>
+
+                                <% if (brochureData.company) { %>
+                                <div class="company-data">
+                                    <p style="width: 100%;">
+                                       <!--  <span style="width:50%; float: left;" class="company-email" ><b>E :</b> <%= brochureData.company.email %> </span> -->
+                                        <span style="width:100%;" class="company-website" ><b style="color: #623229; padding-right: 7px; font-size: 14px;  font-weight: 600; font-family: 'Montserrat', sans-serif;">W :</b> 
+                                           <%= brochureData.company.contact_link %></span>
+                                    </p>
+                                </div>
+                                <% }%>
+                            </div>
+                        </div>
+                        <div class="company-bg-logo-content">
+                            <div class="content-wrap">
+                                <div class="company-bg"><img src="http://localhost:<%= brochureData.port %>/images/front/brochure-backgroundimage.png"></div>
+                                 <% if (brochureData && brochureData.company && brochureData.company.image) { %>
+                                <div class="company-logo">
+                                    <img src="http://localhost:<%= brochureData.port %>/<%= brochureData.company.image %>" alt="">
+                                </div>
+                                <% }%>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <%  } %>
+
+        <table>
+            <tr>
+                <td>
+                     <div class="brochure-last-introduction-page">
+                        <div class="img-content">
+                            <div class="content-wrap">
+                                <div class="img">
+                                    <img src="http://localhost:<%= brochureData.port %>/images/front/brochures/eye-face-leg.png" alt="eye-face-leg">
+                                </div>
+                                <div class="content" style="padding: 0;margin: 0;">
+                                    <div class="content-p">
+                                        <h5>GIFT VOUCHER AVAILABLE</h5>
+                                        <p>Give the gift of relaxation, energy and an overall sense of balance with Adorn’s Gift Voucher. Available in denominations from £5 through to £300 you are guaranteed to give that special someone the perfect gift, whatever the occasion.</p>
+                                        <h6>Buy Gift voucher online now</h6>
+                                        <a href="http://adorn-beauty.com/giftvoucher.html">http://adorn-beauty.com/giftvoucher.html</a>
+                                    </div>
+                                    <div class="img">
+                                        <img src="http://localhost:<%= brochureData.port %>/images/front/brochures/box.png">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </td>
+            </tr>
+        </table>
+
+       
+    </body>
+</html>

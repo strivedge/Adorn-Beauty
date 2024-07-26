@@ -1,0 +1,107 @@
+<table style="width:100%;border-collapse: separate!important;border-spacing: 0;font-size: 14px;font-family: Tahoma, Geneva, sans-serif;table-layout: fixed;border-collapse: collapse;" width="100%" cellspacing="1" cellpadding="1" border="0">
+    <tbody>
+        <tr>
+            <td colspan="2" style="text-align:center;">
+                <img alt="Logo" src="
+                {{text.site_url}}/images/front-logo.png" style="height: auto;max-width: 125px;width:125px; text-align: center;margin: 0 auto;display: block;">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="border-bottom:1px solid #cccccc; text-align:left;">
+                <h3 style="margin: 0;padding-bottom: 10px; text-align:center;font-size: 16px;">CANCELLATION</h3>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="2" style="font-weight: bold; font-size: 16px;padding: 10px 0px 0px; text-align:left;">Dear {{text.client_name}},</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-weight: bold; font-size: 14px;padding-top: 5px;text-align: left;">Just a quick message to let you know that a booking has been cancelled with {{text.company_name}} ({{text.location_name}}).<br><br>To learn about current offers please visit :&nbsp;<strong><a href="https://apgem.co/offers">https://apgem.co/offers</a></strong></td>
+        </tr>
+
+
+        <tr>
+            <td colspan="2">
+                <h3 style="margin: 15px 0 10px;background: #efefef; border-bottom: 1px solid #eff2f7;padding: 15px;border-radius: 0.25rem;font-weight: bold;color: #623229;font-size: 16px;">Booking Details</h3>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+
+                {{#text.client_email}}
+
+                {{/text.client_email}}
+                <br><br>
+                <br><br><table width="100%" cellspacing="1" cellpadding="1" border="0" style="display: table; table-layout: fixed;border-collapse: collapse;">
+                    <tbody>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Appointment Reference Number:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{text.data._id}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Appointment Date:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{ text.date }} {{ text.data.start_time }}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Client Name:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{ text.client_name }}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Client Contact No: </strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{ text.client_mobile }}</td>
+                        </tr>
+                        <tr style="display: none;"></tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Client Email Id: </strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{ text.client_email }}</td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{#text.data.deposit_gift_card_bal}}</td>
+                        </tr>
+                        <tr>
+                            
+                            <td colspan="2" style="font-weight: bold; font-size: 14px; padding-top: 5px; text-align: left;">
+                                We have taken {{ text.currency }}{{ text.data.deposit_gift_card_bal }} as deposit from your gift card
+                                balance.
+                            </td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{/text.data.deposit_gift_card_bal}}</td>
+                        </tr>
+                        <tr style="display: none;"></tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="2" style="width:100%;text-align:center;">
+                <p style="margin: 10px 0;padding: 10px 10px;background: #efefef">
+                    <strong style="display: none;">
+                        {{#text.front_url}}
+                    </strong>
+
+                    <strong style="display: block;padding-bottom: 6px;">Please <a href="https://{{text.location_domain}}.{{text.front_url}}" style="color: #613228;"> Click Here </a>to schedule your appointment again.
+
+                    </strong>
+
+                    <strong style="display: none;">
+                        {{/text.front_url}}
+                    </strong>
+
+                    <strong style="display: none;">
+                        {{#text.unsubscribe_url}}
+                    </strong>
+                    <strong style="display: block;">Manage your preference <a href="{{text.unsubscribe_url}}" style="color: #613228;">Unsubscribe</a>. </strong>
+                    <strong style="display: none;">
+                        {{/text.unsubscribe_url}}
+                    </strong>
+                </p>
+            </td>
+        </tr>
+    </tfoot>
+</table>

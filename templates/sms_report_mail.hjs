@@ -1,0 +1,31 @@
+<table style="width:100%;border-collapse: separate!important;border-spacing: 0;font-size: 14px;font-family: Tahoma, Geneva, sans-serif;table-layout: fixed;border-collapse: collapse;" width="100%" cellspacing="1" cellpadding="1" border="0">
+    <tbody>
+        <tr>
+            <td colspan="2" style="text-align:center;border-bottom:1px solid #cccccc;padding-bottom: 10px;">
+                <img alt="Logo" src="
+                {{text.site_url}}/images/front-logo.png" style="height: auto;max-width: 125px;width:125px; text-align: center;margin: 0 auto;display: block;">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h3 style="margin: 15px 0 10px;background: #efefef; border-bottom: 1px solid #eff2f7;padding: 15px;border-radius: 0.25rem;font-weight: bold;color: #623229;font-size: 16px;">SMS Log Report</h3>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table width="100%" cellspacing="1" cellpadding="1" border="0" style="display: table; table-layout: fixed;border-collapse: collapse;">
+                    <tbody>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Branch Name:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;">{{text.branch_name}}</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        
+                    </tfoot>
+                </table>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

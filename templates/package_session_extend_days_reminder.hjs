@@ -1,0 +1,101 @@
+<table style="width:100%;border-collapse: separate!important;border-spacing: 0;font-size: 14px;font-family: Tahoma, Geneva, sans-serif;table-layout: fixed;border-collapse: collapse;" width="100%" cellspacing="1" cellpadding="1" border="0">
+    <tbody>
+        <tr>
+            <td colspan="2" style="text-align:center;border-bottom:1px solid #cccccc;padding-bottom: 10px;">
+                <img alt="Logo" src="
+                {{text.site_url}}/images/front-logo.png" style="height: auto;max-width: 125px;width:125px; text-align: center;margin: 0 auto;display: block;">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-weight: bold; font-size: 16px;padding: 10px 0px 0px; text-align:left;">Dear {{text.name}},</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-size: 16px; padding-top: 5px;text-align: left;"> It is kind reminder to book your appointment for your Package for <strong>{{ text.service_name }}</strong>. Your Next Session <strong>{{ text.available_session }}</strong> is now due. You can book your appointment by calling <strong>{{ text.company_name }}</strong> <strong>{{ text.location_name }}</strong> <strong>{{ text.contact_number }}</strong>.</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-size: 16px; padding-top: 5px;text-align: left;"> <strong>Please note:</strong> Package comes with the specific validity. Your package validity is expires on <strong>{{ text.pkg_validity_date }}</strong>. Claim your package benefits today!</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2" style="text-align:right; vertical-align:top;font-weight: bold; width: 100%;"><strong style="font-size: 18px;padding-bottom: 5px;display: block;text-align: right;">Thanks,</strong>
+                {{#text.company_website}} <a href="{{text.company_website}}" style="font-size: 15px;color: #613228;display: block;text-align: right;">{{text.company_name}}</a>
+                {{/text.company_website}} {{^text.company_website}} <a href="{{text.link_url}}/booking" style="font-size: 15px;color: #613228;">APPOINTGEM</a>
+                {{/text.company_website}}
+
+                {{#text.company_logo}} <img alt="Logo" src="{{text.site_url}}/{{text.company_logo}}" style="height: auto;max-width: 80px;text-align: right;margin-top: 5px;width: 80px;float: right;"> {{/text.company_logo}} {{^text.company_logo}} <img alt="Logo" src="{{text.site_url}}/images/front-logo.png" style="height: auto;max-width: 80px;text-align: right;margin-top: 8px;width: 80px;float: right;"> {{/text.company_logo}}
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <h3 style="margin: 15px 0 10px;background: #efefef; border-bottom: 1px solid #eff2f7;padding: 15px;border-radius: 0.25rem;font-weight: bold;color: #623229;font-size: 16px;clear: both;">Important Information:</h3>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding-bottom: 10px;line-height: 1.5;">
+                <ul style="margin: 0;padding-left: 0px;">
+                    <li style="list-style-type: none;padding-bottom: 8px;margin:0;"><strong>1.</strong> It is advisable to be present 10 minutes before your scheduled appointment.</li>
+                    <li style="list-style-type: none;padding-bottom: 8px;margin:0;"><strong>2.</strong> During our busy time, there is a possibility that your appointment may be delayed by up to 10 minutes.</li>
+                    <li style="list-style-type: none;padding-bottom: 8px;margin:0;"><strong>3.</strong> We are able to accommodate a 10-minute grace period after your scheduled appointment time, except during peak hours. If you do not arrive within this timeframe, your appointment will be cancelled. Should you arrive after the 10-minute window, we will treat you as a walk-in client and ask for your patience while we fit you in.</li>
+                    <li style="list-style-type: none;padding-bottom: 8px;margin:0;"><strong>4.</strong> If you've pre-paid for your appointment and fail to show up, we'll deduct 10% from your total treatment cost. If you arrive after 10 minutes, we'll still honour your appointment but ask for your cooperation and patience while waiting.</li>
+                    <li style="list-style-type: none;padding-bottom: 8px;margin:0;"><strong>5.</strong> You will not incur any charges for cancelling your appointment as long as you do so at least 25 hours before your scheduled booking.</li>
+                    <li style="list-style-type: none;padding-bottom: 8px;margin:0;"><strong>6.</strong> The consultation form has been carefully crafted to cater to your specific needs. Rest assured that any information you provide on the form will be kept safe and will not be disclosed to any other organisation.</li>
+                </ul>
+            </td>
+        </tr>
+       <tr>
+            <td colspan="2" style="font-weight: bold;font-size: 14px;text-align: left;">Please refrain from responding to this email, as we do not monitor this email account. For any inquiries, please reach out to {{text.company_name}} {{text.location_name}} Branch during our working hours.</td>
+        </tr>
+
+         <tr style="display: none;">
+            <td>{{#text.location_contact}}</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h3 style="margin: 15px 0 10px;background: #efefef; border-bottom: 1px solid #eff2f7;padding: 15px;border-radius: 0.25rem;font-weight: bold;color: #623229;font-size: 16px;">Branch Name and Contact Details:</h3>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table width="100%" cellspacing="1" cellpadding="1" border="0" style="display: table; table-layout: fixed;border-collapse: collapse;">
+                    <tbody>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>
+                                    {{text.company_name}} {{text.location_name}} :</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{text.location_contact}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr style="display: none;">
+            <td>{{/text.location_contact}}</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="width:100%;text-align:center;">
+                <p style="margin: 10px 0;padding: 10px 10px;background: #efefef">
+                    <strong style="display: none;">
+                        {{#text.front_url}}
+                    </strong>
+                   
+                    <strong style="display: block;padding-bottom: 6px;">if you have any query about treatments or want to learn more about treatments, please visit
+                        <a href="https://{{text.location_domain}}.{{text.front_url}}" style="color: #613228;">https://{{text.location_domain}}.{{text.front_url}}</a>
+                    </strong>
+                   
+                    <strong style="display: none;">
+                        {{/text.front_url}}
+                    </strong>
+
+                    <strong style="display: none;">
+                        {{#text.unsubscribe_url}}
+                    </strong>
+                    <strong style="display: block;">Manage your preference <a href="{{text.unsubscribe_url}}" style="color: #613228;">Unsubscribe</a>. </strong>
+                    <strong style="display: none;">
+                       {{/text.unsubscribe_url}}
+                    </strong>
+                </p>
+            </td>
+        </tr>
+    </tfoot>
+</table>

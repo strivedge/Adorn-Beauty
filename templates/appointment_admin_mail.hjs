@@ -1,0 +1,385 @@
+<table style="width:100%;border-collapse: separate!important;border-spacing: 0;font-size: 14px;font-family: Tahoma, Geneva, sans-serif;table-layout: fixed;border-collapse: collapse;" width="100%" cellspacing="1" cellpadding="1" border="0">
+    <tbody>
+        <tr>
+            <td colspan="2" style="text-align:center;"> <img alt="Logo" src="
+                {{text.site_url}}/images/front-logo.png" style="height: auto;max-width: 125px;width:125px; text-align: center;margin: 0 auto;display: block;"> </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="border-bottom:1px solid #cccccc; text-align:left;">
+                <h3 style="margin: 0;padding-bottom: 10px; text-align:center;font-size: 16px;">Your appointment booking confirmation with {{#text.company_name}} {{text.company_name}} {{/text.company_name}} {{^text.company_name}} AppointGem {{/text.company_name}} ({{text.location_name}})</h3>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-weight: bold; font-size: 16px;padding: 10px 0px 0px; text-align:left;">Dear {{text.client_name}},</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-weight: bold; font-size: 14px;color: #623229; padding-top: 5px;text-align: left;">Your Appointment has been booked successfully.</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h3 style="margin: 15px 0 10px;background: #efefef; border-bottom: 1px solid #eff2f7;padding: 15px;border-radius: 0.25rem;font-weight: bold;color: #623229;font-size: 16px;">Important Information</h3>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <ul style="margin: 0;padding-left: 0px;padding-bottom: 10px;">
+                    <li style="list-style-type: none;padding-bottom: 8px;margin:0;">1. To ensure we provide you with the best service possible, we kindly request that you complete the consultation form for your {{service_id}} . The form is linked below for your convenience.</li>
+                    <li style="list-style-type: none;padding-bottom: 8px;margin:0;">2. Kindly ensure that you review the {{service_id}} before and after treatment care. When investing in your well-being, we kindly request that you adhere to the pre- and post-treatment care guidelines.</li>
+                    <li style="list-style-type: none;padding-bottom: 8px;margin:0;">3. We would be extremely grateful if you could share your feedback with us if you have enjoyed using our service. Simply click on the link provided to leave your feedback. <a href="https://apgem.co/abw" style="color: #613228;">click here </a></li>to review us
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table width="100%" cellspacing="1" cellpadding="1" border="0" style="display: table; table-layout: fixed;border-collapse: collapse;">
+                    <tbody>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Consultation Form:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> <a href="{{text.consultant_url}}" style="color: #613228;"> Consultation</a></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding-bottom: 8px;width:50%;vertical-align: top;"><strong>Before After Treatment Description: </strong></td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{#text.cat_data}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;"><strong>{{name}} </strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"><a href="{{text.link_url}}/service/{{text.loc_name}}/{{url_name}}" style="color: #613228;">{{url_name}}</a> </td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{/text.cat_data}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h3 style="margin: 15px 0 10px;background: #efefef; border-bottom: 1px solid #eff2f7;padding: 15px;border-radius: 0.25rem;font-weight: bold;color: #623229;font-size: 16px;">Booking Information</h3>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table width="100%" cellspacing="1" cellpadding="1" border="0" style="display: table; table-layout: fixed;border-collapse: collapse;">
+                    <tbody>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Appointment Reference Number:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{text.data._id}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Total Amount:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;">{{ text.currency }}{{ text.grand_total }}</td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{#text.total_paid_amount}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Paid Amount:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{ text.currency }}{{ text.total_paid_amount }}</td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{/text.total_paid_amount}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Payable Amount:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{ text.currency }}{{ text.total_remaining_amount }}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Payable At: </strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{text.company_name}} {{ text.location_name }} Branch</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Payment Status:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> Client needs to pay {{ text.currency }}{{ text.total_remaining_amount }} at {{text.location_name}}</td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{#text.data.used_gift_card_bal}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;">
+                                <strong>Gift card balance used:</strong>
+                            </td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;">
+                                {{ text.currency }}{{ text.data.used_gift_card_bal }}
+                            </td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{/text.data.used_gift_card_bal}}</td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{#text.data.discount_id}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Discount code:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{ text.data.discount_code }}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Discount desc:</strong> </td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{ text.description}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Discount Applied:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{ text.currency }}{{ text.data.grand_discounted_price }}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Total Price:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{ text.currency }}{{ text.data.grand_final_price }}</td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{/text.data.discount_id}}</td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{#text.data.discount_slab_id}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Discount desc:</strong> </td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;">{{ text.discount_slab_desc}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Discount Applied:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{ text.currency }}{{ text.data.grand_discounted_price }}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Total Price:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{ text.currency }}{{ text.data.grand_final_price }}</td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{/text.data.discount_slab_id}}</td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{#text.package_data}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Package Name:</strong> </td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;">{{ name}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Session:</strong> </td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;">{{ available_session }}/{{ total_session }}</td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{/text.package_data}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align:left;">
+                                <p style="margin: 0;line-height:2.5;"> click here to <a href="{{text.booking_preview_url}}"> <button style="color: #fff;background-color: #613228;border-color: #613228;font-weight: 400;border-radius: 0.25rem;font-size: 14px;padding: 3px;" name="reschedule" id="reschedule">Reschedule</button></a> your appointment or click here to <a href="{{text.booking_preview_url}}"> <button style="color: #fff;background-color: #8a9198;border-color: #8a9198;font-weight: 400;border-radius: 0.25rem;font-size: 14px;padding: 3px;" name="cancel" id="cancel">Cancel</button></a> your appointment</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h3 style="margin: 15px 0 10px;background: #efefef; border-bottom: 1px solid #eff2f7;padding: 15px;border-radius: 0.25rem;font-weight: bold;color: #623229;font-size: 16px;">Appointment Info</h3>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table width="100%" cellspacing="1" cellpadding="1" border="0" style="display: table; table-layout: fixed;border-collapse: collapse;">
+                    <tbody>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Appointment Date:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{ text.date }} {{ text.data.start_time }}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Client Name:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{ text.client_name }}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Client Contact No: </strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{ text.client_mobile }}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Client Email Id: </strong></td>
+                            <td style="padding-bottom: 8px;width:50%;color: #613228;padding-left: 5px;"> {{ text.client_email }}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Treatment: </strong> </td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{ text.services }}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"> <strong> Treatment With Employee: </strong> </td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{ text.servicesEmp }}</td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{#text.group_data_flag}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"> <strong>Total Amount:</strong> </td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;">{{text.data.total_amount}}</td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{#text.data.paid_amount}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Paid Amount:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;">{{text.data.paid_amount}}</td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{/text.data.paid_amount}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"> <strong>Payable Amount:</strong> </td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;">{{text.data.remaining_amount}} </td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{/text.group_data_flag}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr style="display: none;">
+            <td>{{#text.group_data_flag}}</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h3 style="margin: 15px 0 10px;background: #efefef; border-bottom: 1px solid #eff2f7;padding: 15px;border-radius: 0.25rem;font-weight: 600;color: #623229;font-size: 16x;">Friend's Booking</h3>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table width="100%" cellspacing="1" cellpadding="1" border="0" style="display: table; table-layout: fixed;border-collapse: collapse;">
+                    <tbody>
+                        <tr style="display: none;">
+                            <td>{{#text.data.group_data}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Name:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;">{{client_name}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Treatment:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;">{{service_id}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Total Amount:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;">{{total_amount}}</td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{#paid_amount}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Paid Amount:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;">{{paid_amount}}</td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{/paid_amount}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Payable Amount:</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;">{{remaining_amount}} &nbsp;</td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>{{/text.data.group_data}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr style="display: none;">
+            <td>{{/text.group_data_flag}}</td>
+        </tr>
+        <tr style="display: none;">
+            <td>{{#text.data.comments}}</td>
+        </tr>
+        <tr>
+            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong>Extra Comments:</strong></td>
+            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;">{{text.data.comments}}</td>
+        </tr>
+        <tr style="display: none;">
+            <td>{{/text.data.comments}}</td>
+        </tr>
+        <tr style="display: none;">
+            <td>{{#text.is_paypal}}</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-size: 14px;line-height: 1.5;padding-top: 5px;font-weight: 400;"><strong>{{{text.payment_msg}}}</strong></td>
+        </tr>
+        <tr style="display: none;">
+            <td>{{/text.is_paypal}}</td>
+        </tr>
+        <tr style="display: none;">
+            <td>{{#text.is_paypal}}</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-size: 14px;line-height: 1.5;font-weight: 400;"><strong>You are paying full amount today. If you don't turn up on your appointment, you will lose your payment.</strong></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-size: 14px;line-height: 1.5;font-weight: 400;"><strong>The booking fees is non-refundable or non-transferrable. If you do not turn up on your appointment time, you will lose this amount</strong></td>
+        </tr>
+        <tr style="display: none;">
+            <td>{{/text.is_paypal}}</td>
+        </tr>
+        <tr style="display: none;">
+            <td>{{#text.permission_msg_flag}}</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding-top: 5px;"><input type="checkbox" disabled="" name="notification_permission" value="1" checked="{{text.permission_checked}}" id="permission_btn" style="width: 14px;margin-right: 5px;">{{text.permission_msg}} </td>
+        </tr>
+        <tr style="display: none;">
+            <td>{{/text.permission_msg_flag}}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2" style="text-align:right; vertical-align:top;font-weight: bold; width: 100%;"><strong style="font-size: 18px;padding-bottom: 5px;display: block;text-align: right;">Thanks,</strong>
+                {{#text.company_website}} <a href="{{text.company_website}}" style="font-size: 15px;color: #613228;display: block;text-align: right;">{{text.company_name}}</a>
+                {{/text.company_website}} {{^text.company_website}} <a href="{{text.link_url}}/booking" style="font-size: 15px;color: #613228;">APPOINTGEM</a>
+                {{/text.company_website}}
+
+                {{#text.company_logo}} <img alt="Logo" src="{{text.site_url}}/{{text.company_logo}}" style="height: auto;max-width: 80px;text-align: right;margin-top: 5px;width: 80px;float: right;"> {{/text.company_logo}} {{^text.company_logo}} <img alt="Logo" src="{{text.site_url}}/images/front-logo.png" style="height: auto;max-width: 80px;text-align: right;margin-top: 8px;width: 80px;float: right;"> {{/text.company_logo}}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h3 style="margin: 15px 0 10px;background: #efefef; border-bottom: 1px solid #eff2f7;padding: 15px;border-radius: 0.25rem;font-weight: bold;color: #623229;font-size: 16px;clear: both;">Important Information:</h3>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding-bottom: 10px;line-height: 1.5;">
+                <ul style="margin: 0;padding-left: 0px;">
+                    <li style="list-style-type: none;padding-bottom: 8px;margin:0;"><strong>1.</strong> It is advisable to be present 10 minutes before your scheduled appointment.</li>
+                    <li style="list-style-type: none;padding-bottom: 8px;margin:0;"><strong>2.</strong> During our busy time, there is a possibility that your appointment may be delayed by up to 10 minutes.</li>
+                    <li style="list-style-type: none;padding-bottom: 8px;margin:0;"><strong>3.</strong> We are able to accommodate a 10-minute grace period after your scheduled appointment time, except during peak hours. If you do not arrive within this timeframe, your appointment will be cancelled. Should you arrive after the 10-minute window, we will treat you as a walk-in client and ask for your patience while we fit you in.</li>
+                    <li style="list-style-type: none;padding-bottom: 8px;margin:0;"><strong>4.</strong> If you've pre-paid for your appointment and fail to show up, we'll deduct 10% from your total treatment cost. If you arrive after 10 minutes, we'll still honour your appointment but ask for your cooperation and patience while waiting.</li>
+                    <li style="list-style-type: none;padding-bottom: 8px;margin:0;"><strong>5.</strong> If you've pre-paid for your appointment and fail to show up, we'll deduct 10% from your total treatment cost. If you arrive after 10 minutes, we'll still honour your appointment but ask for your cooperation and patience while waiting.</li>
+                    <li style="list-style-type: none;padding-bottom: 8px;margin:0;"><strong>6.</strong> The consultation form has been carefully crafted to cater to your specific needs. Rest assured that any information you provide on the form will be kept safe and will not be disclosed to any other organisation.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-weight: bold;font-size: 14px;text-align: left;">Please refrain from responding to this email, as we do not monitor this email account. For any inquiries, please reach out to {{text.company_name}} {{text.location_name}} Branch during our working hours.</td>
+        </tr>
+        <tr style="display: none;">
+            <td>{{#text.location_contact}}</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h3 style="margin: 15px 0 10px;background: #efefef; border-bottom: 1px solid #eff2f7;padding: 15px;border-radius: 0.25rem;font-weight: bold;color: #623229;font-size: 16px;">Branch Name and Contact Details:</h3>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table width="100%" cellspacing="1" cellpadding="1" border="0" style="display: table; table-layout: fixed;border-collapse: collapse;">
+                    <tbody>
+                        <tr>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-right: 5px;word-wrap: break-word;"><strong> {{text.company_name}} {{text.location_name}} :</strong></td>
+                            <td style="padding-bottom: 8px;width:50%;vertical-align: top;padding-left: 5px;word-wrap: break-word;"> {{text.location_contact}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr style="display: none;">
+            <td>{{/text.location_contact}}</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="width:100%;text-align:center;">
+                <p style="margin: 10px 0;padding: 10px 10px;background: #efefef"> <strong style="display: none;"> {{#text.front_url}} </strong> <strong style="display: block;padding-bottom: 6px;">if you have any query about treatments or want to learn more about treatments, please visit <strong style="display: none;"> {{#text.location_domain}} </strong> <a href="https://{{text.location_domain}}.{{text.front_url}}" style="color: #613228;">https://{{text.location_domain}}.{{text.front_url}}</a> <strong style="display: none;"> {{/text.location_domain}} </strong> <strong style="display: none;"> {{^text.location_domain}} </strong> <a href="https://{{text.front_url}}" style="color: #613228;">https://{{text.front_url}}</a> <strong style="display: none;"> {{/text.location_domain}} </strong> </strong> <strong style="display: none;"> {{/text.front_url}} </strong> <strong style="display: none;"> {{#text.unsubscribe_url}} </strong> <strong style="display: block;">Manage your preference <a href="{{text.unsubscribe_url}}" style="color: #613228;">Unsubscribe</a>. </strong> <strong style="display: none;"> {{/text.unsubscribe_url}} </strong> </p>
+            </td>
+        </tr>
+    </tfoot>
+</table>

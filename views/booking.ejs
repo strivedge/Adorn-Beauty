@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        table {
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        table, tr, td {
+                page-break-inside: avoid;
+                page-break-after: avoid;
+                page-break-before: avoid;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="width: 100%; ">
+            <div style="text-align: center;">            
+                <h3>Booking history Report</h5>
+                    <div style="border: 2px solid #eff2f7; border-radius: 4px; padding: 10px; margin-bottom: 20px;">
+                      <div class="customer-details-content">
+                        <h3>Customer Details</h3>
+                        <div class="row" style="margin: 0;">
+                          <div class="col-4">
+                            <label><b>Name:</b></label>
+                            <span><%= client.name %></span>
+                            </div>
+                            <div class="col-4">
+                              <label><b>Email:</b></label>
+                              <span><%= client.email %></span>
+                            </div>
+                            <div class="col-4"> 
+                              <label><b>Mobile:</b></label>
+                              <span><%= client.mobile %></span>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                <table>
+                    <tr>
+                        <td>Service</td>
+                        <td>Therapist</td>
+                        <td>Date</td>
+                        <td>Time</td>
+                        <td>Status</td>
+                    </tr>
+                <% if (data.length > 0) { %>
+                    <% data.forEach(val => {%>
+                       <tr style=" ">
+                        <td>
+                            <% val.service_id.forEach(ser => {%>
+                                 <%= ser.name %>,
+                            <%  });%>
+                                 
+                        </td>
+                        <td><%= val.employee_name %></td>
+                        <td><%=val.date %></td>
+                        <td><%= val.start_time %> - <%= val.end_time %></td>
+                        <td><%=val.booking_status %></td>
+                        
+                    </tr>
+                    <%  });%>
+                <% }%>
+
+                </table>
+             </div>
+        </div>
+    </body>
+</html>
+
