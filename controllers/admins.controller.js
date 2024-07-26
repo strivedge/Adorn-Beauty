@@ -188,7 +188,7 @@ exports.shortLink = async function (req, res, next) {
         //     body: post_data,
         //     headers: {
         //         'Content-Type': 'application/json',
-        //         'Authorization': 'Bearer ejxHisncvXAywIUm'
+        //         'Authorization': 'Bearer'
         //     }
         // }
 
